@@ -127,18 +127,18 @@ export function Performance() {
     <section id="performance">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <IconContainer
-          className="dark:bg-sky-500 dark:highlight-white/20"
+          className="dark:bg-blue-500 dark:highlight-white/20"
           light={require('@/img/icons/home/performance.png').default}
           dark={require('@/img/icons/home/dark/performance.png').default}
         />
-        <Caption className="text-sky-500">Performance</Caption>
+        <Caption className="text-blue-500">Performance</Caption>
         <BigText>It’s tiny — never ship unused CSS again.</BigText>
         <Paragraph>
           Tailwind automatically removes all unused CSS when building for production, which means
           your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind
           projects ship less than 10kB of CSS to the client.
         </Paragraph>
-        <Link href="/docs/optimizing-for-production" color="sky" darkColor="gray">
+        <Link href="/docs/optimizing-for-production" color="blue" darkColor="gray">
           Learn more<span className="sr-only">, optimizing for production</span>
         </Link>
       </div>

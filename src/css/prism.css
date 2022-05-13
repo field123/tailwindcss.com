@@ -18,7 +18,7 @@
 .token.attr-value,
 .token.class,
 .token.string {
-  @apply text-sky-300;
+  @apply text-blue-300;
 }
 
 .token.punctuation,
@@ -27,7 +27,7 @@
 }
 
 .token.attr-value * {
-  @apply text-sky-300;
+  @apply text-blue-300;
 }
 
 .token.attr-value .attr-equals,
@@ -37,7 +37,7 @@
 }
 
 .token.property {
-  @apply text-sky-300;
+  @apply text-blue-300;
 }
 
 .token.unit {

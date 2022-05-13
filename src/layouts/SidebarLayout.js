@@ -14,7 +14,7 @@ const NavItem = forwardRef(({ href, children, isActive, isPublished, fallbackHre
       <Link href={isPublished ? href : fallbackHref}>
         <a
           className={clsx('block border-l pl-4 -ml-px', {
-            'text-sky-500 border-current font-semibold dark:text-sky-400': isActive,
+            'text-blue-500 border-current font-semibold dark:text-blue-800': isActive,
             'border-transparent hover:border-zinc-400 dark:hover:border-zinc-500': !isActive,
             'text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300':
               !isActive && isPublished,
@@ -205,7 +205,7 @@ const TopLevelAnchor = forwardRef(
             'group flex items-center lg:text-sm lg:leading-6',
             className,
             isActive
-              ? 'font-semibold text-sky-500 dark:text-sky-400'
+              ? 'font-semibold text-blue-500 dark:text-blue-800'
               : 'font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300'
           )}
         >
@@ -253,8 +253,8 @@ function TopLevelNav({ mobile }) {
         href="/docs/installation"
         isActive={pathname.startsWith('/docs')}
         className="mb-4"
-        shadow="group-hover:shadow-sky-200 dark:group-hover:bg-sky-500"
-        activeBackground="dark:bg-sky-500"
+        shadow="group-hover:shadow-blue-200 dark:group-hover:bg-blue-500"
+        activeBackground="dark:bg-blue-500"
         icon={
           <>
             <path
@@ -262,10 +262,10 @@ function TopLevelNav({ mobile }) {
               clipRule="evenodd"
               d="M8.5 7c1.093 0 2.117.27 3 .743V17a6.345 6.345 0 0 0-3-.743c-1.093 0-2.617.27-3.5.743V7.743C5.883 7.27 7.407 7 8.5 7Z"
               className={clsx(
-                'fill-sky-200 group-hover:fill-sky-500',
+                'fill-blue-200 group-hover:fill-blue-500',
                 pathname.startsWith('/docs')
-                  ? 'dark:fill-sky-300 dark:group-hover:fill-sky-300'
-                  : 'dark:fill-zinc-400 dark:group-hover:fill-sky-300'
+                  ? 'dark:fill-blue-300 dark:group-hover:fill-blue-300'
+                  : 'dark:fill-zinc-400 dark:group-hover:fill-blue-300'
               )}
             />
             <path
@@ -273,10 +273,10 @@ function TopLevelNav({ mobile }) {
               clipRule="evenodd"
               d="M15.5 7c1.093 0 2.617.27 3.5.743V17c-.883-.473-2.407-.743-3.5-.743s-2.117.27-3 .743V7.743a6.344 6.344 0 0 1 3-.743Z"
               className={clsx(
-                'fill-sky-400 group-hover:fill-sky-500',
+                'fill-blue-400 group-hover:fill-blue-500',
                 pathname.startsWith('/docs')
-                  ? 'dark:fill-sky-200 dark:group-hover:fill-sky-200'
-                  : 'dark:fill-zinc-600 dark:group-hover:fill-sky-200'
+                  ? 'dark:fill-blue-200 dark:group-hover:fill-blue-200'
+                  : 'dark:fill-zinc-600 dark:group-hover:fill-blue-200'
               )}
             />
           </>

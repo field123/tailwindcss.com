@@ -50,7 +50,7 @@ function TableOfContents({ tableOfContents, currentSection }) {
                   'block py-1',
                   pageHasSubsections ? 'font-medium' : '',
                   isActive(section)
-                    ? 'font-medium text-sky-500 dark:text-sky-400'
+                    ? 'font-medium text-blue-500 dark:text-blue-800'
                     : 'hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300'
                 )}
               >
@@ -65,7 +65,7 @@ function TableOfContents({ tableOfContents, currentSection }) {
                   className={clsx(
                     'group flex items-start py-1',
                     isActive(subsection)
-                      ? 'text-sky-500 dark:text-sky-400'
+                      ? 'text-blue-500 dark:text-blue-800'
                       : 'hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300'
                   )}
                 >

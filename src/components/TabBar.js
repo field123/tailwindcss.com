@@ -10,7 +10,7 @@ export function TabBar({
 }) {
   return (
     <div className="flex text-zinc-400 text-xs leading-6">
-      <div className="flex-none text-sky-300 border-t border-b border-t-transparent border-b-sky-300 px-4 py-1 flex items-center">
+      <div className="flex-none text-blue-300 border-t border-b border-t-transparent border-b-blue-300 px-4 py-1 flex items-center">
         {primary.name}
         {showTabMarkers &&
           (primary.saved ? (

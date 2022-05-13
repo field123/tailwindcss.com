@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { VersionSwitcher } from '@/components/VersionSwitcher'
 import { SearchButton } from '@/components/Search'
 import Router from 'next/router'
 import { Logo } from '@/components/Logo'
@@ -11,24 +10,24 @@ import { ThemeSelect, ThemeToggle } from './ThemeToggle'
 function Featured() {
   return (
     <Link href="/blog/tailwindcss-v3">
-      <a className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20">
-        <strong className="font-semibold">Tailwind CSS v3.0</strong>
+      <a className="ml-3 text-xs leading-5 font-medium text-blue-600 dark:text-blue-800 bg-blue-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-blue-400/20">
+        <strong className="font-semibold">Featured Banner</strong>
         <svg
           width="2"
           height="2"
           fill="currentColor"
           aria-hidden="true"
-          className="ml-2 text-sky-600 dark:text-sky-400/70"
+          className="ml-2 text-blue-600 dark:text-blue-800/70"
         >
           <circle cx="1" cy="1" r="1" />
         </svg>
         <span className="ml-2">
-          Just-in-Time all the time, colored shadows, scroll snap and more
+          Add something promotional here
         </span>
         <svg
           width="3"
           height="6"
-          className="ml-3 overflow-visible text-sky-300 dark:text-sky-400"
+          className="ml-3 overflow-visible text-blue-300 dark:text-blue-800"
           aria-hidden="true"
         >
           <path
@@ -106,7 +105,7 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
             <li>
               <a
                 href="https://github.com/tailwindlabs/tailwindcss"
-                className="hover:text-sky-500 dark:hover:text-sky-400"
+                className="hover:text-blue-500 dark:hover:text-blue-800"
               >
                 GitHub
               </a>
@@ -126,17 +125,17 @@ export function NavItems() {
     <>
       <li>
         <Link href="/docs/installation">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Docs</a>
+          <a className="hover:text-blue-500 dark:hover:text-blue-800">Docs</a>
         </Link>
       </li>
       <li>
-        <a href="https://tailwindui.com" className="hover:text-sky-500 dark:hover:text-sky-400">
+        <a href="https://tailwindui.com" className="hover:text-blue-500 dark:hover:text-blue-800">
           Components
         </a>
       </li>
       <li>
         <Link href="/blog">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Blog</a>
+          <a className="hover:text-blue-500 dark:hover:text-blue-800">Blog</a>
         </Link>
       </li>
     </>
@@ -212,7 +211,6 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   <Logo className="w-auto h-5" />
                 </a>
               </Link>
-              <VersionSwitcher />
               <Featured />
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-zinc-700 dark:text-zinc-200">

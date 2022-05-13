@@ -56,13 +56,13 @@ export default function Blog() {
                 </dl>
               </div>
               <Link href={`/blog/${slug}`}>
-                <a className="flex items-center text-sm text-sky-500 font-medium">
+                <a className="flex items-center text-sm text-blue-500 font-medium">
                   <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl" />
                   <span className="relative">
                     Read more<span className="sr-only">, {meta.title}</span>
                   </span>
                   <svg
-                    className="relative mt-px overflow-visible ml-2.5 text-sky-300 dark:text-sky-700"
+                    className="relative mt-px overflow-visible ml-2.5 text-blue-300 dark:text-blue-700"
                     width="3"
                     height="6"
                     viewBox="0 0 3 6"

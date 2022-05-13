@@ -71,7 +71,7 @@ export default function Resources() {
   return (
     <BasicLayout>
       <header className="mb-20 max-w-xl">
-        <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
+        <p className="mb-4 text-sm leading-6 font-semibold text-blue-500 dark:text-blue-800">
           Resources
         </p>
         <h1 className="mb-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-200">
@@ -128,7 +128,7 @@ export default function Resources() {
                   require('@/img/resources/tailwindui-small@75.jpg').default,
                   require('@/img/resources/tailwindui@75.jpg').default,
                 ],
-                color: 'text-sky-500',
+                color: 'text-blue-500',
                 href: 'https://tailwindui.com',
                 body: (
                   <>
@@ -271,7 +271,7 @@ export default function Resources() {
                 ),
                 href: 'https://www.youtube.com/watch?v=cZc4Jn5nK3k',
                 image: require('@/img/resources/translating-design-system@75.jpg').default,
-                color: 'text-sky-500',
+                color: 'text-blue-500',
               },
               {
                 superTitle: 'Fundamentals',

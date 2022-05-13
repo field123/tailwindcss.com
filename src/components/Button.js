@@ -10,9 +10,9 @@ let colors = {
     'bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600',
     'text-pink-300 group-hover:text-pink-400',
   ],
-  sky: [
-    'bg-sky-50 text-sky-600 hover:bg-sky-100 hover:text-sky-700 focus:ring-sky-600',
-    'text-sky-300 group-hover:text-sky-400',
+  blue: [
+    'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 focus:ring-blue-600',
+    'text-blue-300 group-hover:text-blue-800',
   ],
   zinc: [
     'bg-zinc-50 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-700 focus:ring-zinc-600',
@@ -29,9 +29,9 @@ let colorsDark = {
     'dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:hover:text-white dark:focus:ring-zinc-500',
     'dark:text-zinc-500 dark:group-hover:text-zinc-400',
   ],
-  sky: [
-    'dark:bg-sky-500 dark:text-sky-50 dark:hover:bg-sky-400 dark:hover:text-white dark:focus:ring-sky-200',
-    'dark:text-sky-300 dark:group-hover:text-sky-100',
+  blue: [
+    'dark:bg-blue-500 dark:text-blue-50 dark:hover:bg-blue-400 dark:hover:text-white dark:focus:ring-blue-200',
+    'dark:text-blue-300 dark:group-hover:text-blue-100',
   ],
 }
 

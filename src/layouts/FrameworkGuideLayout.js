@@ -5,7 +5,7 @@ export function FrameworkGuideLayout({ title, description, children }) {
     <BasicLayout>
       <header id="header" className="mb-10 md:flex md:items-start">
         <div className="flex-auto max-w-4xl">
-          <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
+          <p className="mb-4 text-sm leading-6 font-semibold text-blue-500 dark:text-blue-800">
             Installation
           </p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight dark:text-zinc-200">

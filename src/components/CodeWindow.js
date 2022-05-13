@@ -17,7 +17,7 @@ export function CodeWindow({ children, className, border = true }) {
             <div className="w-2.5 h-2.5 bg-zinc-600 rounded-full" />
             <div className="w-2.5 h-2.5 bg-zinc-600 rounded-full" />
           </div>
-          {/* <div className="h-px bg-gradient-to-r from-sky-300/0 via-sky-300/20 to-sky-300/0" /> */}
+          {/* <div className="h-px bg-gradient-to-r from-blue-300/0 via-blue-300/20 to-blue-300/0" /> */}
         </div>
         <div className="relative min-h-0 flex-auto flex flex-col">{children}</div>
       </div>

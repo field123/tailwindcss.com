@@ -91,22 +91,22 @@ function Header() {
           </h1>
           <p className="mt-6 text-lg text-zinc-600 text-center max-w-3xl mx-auto dark:text-zinc-400">
             A utility-first CSS framework packed with classes like{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">flex</code>,{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">pt-4</code>,{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
+            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">flex</code>,{' '}
+            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">pt-4</code>,{' '}
+            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">
               text-center
             </code>{' '}
             and{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">rotate-90</code>{' '}
+            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">rotate-90</code>{' '}
             that can be composed to build any design, directly in your markup.
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
             <NextLink href="/docs/installation">
-              <a className="bg-blue-900 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">
+              <a className="bg-blue-900 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-blue-500 dark:highlight-white/20 dark:hover:bg-blue-400">
                 Get started
               </a>
             </NextLink>
-            <SearchButton className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-zinc-900/10 hover:ring-zinc-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-zinc-400 dark:bg-zinc-800 dark:ring-0 dark:text-zinc-300 dark:highlight-white/5 dark:hover:bg-zinc-700">
+            <SearchButton className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-zinc-900/10 hover:ring-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm rounded-lg text-zinc-400 dark:bg-zinc-800 dark:ring-0 dark:text-zinc-300 dark:highlight-white/5 dark:hover:bg-zinc-700">
               {({ actionKey }) => (
                 <>
                   <svg
@@ -174,7 +174,7 @@ export default function Home() {
                 I’ve written{' '}
                 <a
                   href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
-                  className="text-sky-500 font-semibold dark:text-sky-400"
+                  className="text-blue-500 font-semibold dark:text-blue-800"
                 >
                   a few thousand words
                 </a>{' '}

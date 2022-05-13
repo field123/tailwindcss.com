@@ -164,7 +164,7 @@ function Colors() {
       exit={{ opacity: 0 }}
       className="relative space-y-6 font-mono text-[0.625rem] leading-5 pt-5 px-5"
     >
-      {['sky', 'zinc', 'indigo', 'purple'].map((color, i) => (
+      {['blue', 'zinc', 'indigo', 'purple'].map((color, i) => (
         <motion.li
           key={color}
           initial={{ opacity: 0 }}

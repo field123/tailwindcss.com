@@ -233,7 +233,7 @@ module.exports.highlightCode = function highlightCode(code, prismLanguage) {
             line,
             `block${
               highlightedLines.includes(index)
-                ? ' -mx-5 pl-4 pr-5 border-l-4 border-sky-400 bg-sky-300/[0.15]'
+                ? ' -mx-5 pl-4 pr-5 border-l-4 border-blue-400 bg-blue-300/[0.15]'
                 : ''
             }`
           )

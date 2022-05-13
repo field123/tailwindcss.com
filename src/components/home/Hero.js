@@ -25,7 +25,7 @@ const ranges = [
   getRange(' mx-auto'),
   getRange(' font-medium'),
   getRange(' class="font-medium"'),
-  getRange(' class="text-sky-500 dark:text-sky-400"'),
+  getRange(' class="text-blue-500 dark:text-blue-800"'),
   getRange(' class="text-zinc-700 dark:text-zinc-500"'),
   getRange(' text-center'),
   getRange('md:flex '),
@@ -358,7 +358,7 @@ export function Hero() {
                       className={clsx(
                         'transition-colors duration-500',
                         step >= 5
-                          ? 'text-sky-500 dark:text-sky-400'
+                          ? 'text-blue-500 dark:text-blue-800'
                           : 'text-black dark:text-zinc-300'
                       )}
                     >

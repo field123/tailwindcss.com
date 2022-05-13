@@ -65,7 +65,7 @@ function CopyButton({ code }) {
         type="button"
         className={clsx({
           'text-zinc-500 hover:text-zinc-400': state === 'idle',
-          'text-sky-400': state === 'copied',
+          'text-blue-800': state === 'copied',
         })}
         onClick={() => {
           navigator.clipboard.writeText(redent(code.replace(/^[+>-]/gm, ' '))).then(() => {
@@ -96,14 +96,14 @@ function CopyButton({ code }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <Alert className="relative bg-sky-500 text-white font-mono text-[0.625rem] leading-6 font-medium px-1.5 rounded-lg">
+        <Alert className="relative bg-blue-500 text-white font-mono text-[0.625rem] leading-6 font-medium px-1.5 rounded-lg">
           Copied
           <svg
             aria-hidden="true"
             width="16"
             height="6"
             viewBox="0 0 16 6"
-            className="text-sky-500 absolute top-full left-1/2 -mt-px -ml-2"
+            className="text-blue-500 absolute top-full left-1/2 -mt-px -ml-2"
           >
             <path
               fillRule="evenodd"
@@ -176,7 +176,7 @@ function Snippet({ code, highlightedCode }) {
 function TabBar({ name, children }) {
   return (
     <div className="relative flex text-zinc-400 text-xs leading-6">
-      <div className="mt-2 flex-none text-sky-300 border-t border-b border-t-transparent border-b-sky-300 px-4 py-1 flex items-center">
+      <div className="mt-2 flex-none text-blue-300 border-t border-b border-t-transparent border-b-blue-300 px-4 py-1 flex items-center">
         {name}
       </div>
       <div className="flex-auto flex pt-2 rounded-tr-xl overflow-hidden">

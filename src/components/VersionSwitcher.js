@@ -19,7 +19,7 @@ export function VersionSwitcher({ className }) {
       </Menu.Button>
       <Menu.Items className="absolute top-full mt-1 py-2 w-40 rounded-lg bg-white shadow ring-1 ring-zinc-900/5 text-sm leading-6 font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:highlight-white/5">
         <Menu.Item disabled>
-          <span className="flex items-center justify-between px-3 py-1 text-sky-500 dark:text-sky-400">
+          <span className="flex items-center justify-between px-3 py-1 text-blue-500 dark:text-blue-800">
             v{pkg.version}
             <svg width="24" height="24" fill="none" aria-hidden="true">
               <path

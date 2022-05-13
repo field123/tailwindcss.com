@@ -173,13 +173,13 @@ function ComponentExample({ framework }) {
                     type="button"
                     className={clsx(
                       'relative py-2 px-3',
-                      tabIndex === activeTab ? 'text-sky-300' : 'hover:text-zinc-300'
+                      tabIndex === activeTab ? 'text-blue-300' : 'hover:text-zinc-300'
                     )}
                     onClick={() => setActiveTab(tabIndex)}
                   >
                     {tab}
                     {tabIndex === activeTab && (
-                      <span className="absolute z-10 bottom-0 inset-x-3 h-px bg-sky-300" />
+                      <span className="absolute z-10 bottom-0 inset-x-3 h-px bg-blue-300" />
                     )}
                   </button>
                 </li>
@@ -266,7 +266,7 @@ function ComponentExample({ framework }) {
 function ApplyExample({ inView }) {
   return (
     <CodeWindow className="!h-auto !max-h-[none]" border={false}>
-      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-zinc-500/30">
+      <h3 className="pl-4 flex text-sm leading-6 text-blue-300 border-b border-zinc-500/30">
         <span className="-mb-px py-2 border-b border-b-current">styles.css</span>
       </h3>
       <div className="flex-none">
@@ -291,7 +291,7 @@ function ApplyExample({ inView }) {
           ))}
         </CodeWindow.Code2>
       </div>
-      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-zinc-500/30">
+      <h3 className="pl-4 flex text-sm leading-6 text-blue-300 border-b border-zinc-500/30">
         <span className="-mb-px py-2 border-b border-b-current">index.html</span>
       </h3>
       <div className="overflow-hidden">
@@ -336,7 +336,7 @@ function AtApplySection() {
           Use Tailwind's <InlineCode>@apply</InlineCode> directive to extract repeated utility patterns
           into custom CSS classes just by copying and pasting the list of class names.
         </Paragraph>
-        <Link href="/docs/reusing-styles" color="sky" darkColor="gray">
+        <Link href="/docs/reusing-styles" color="blue" darkColor="gray">
           Learn more<span className="sr-only">, reusing styles</span>
         </Link>
       </div>
@@ -412,7 +412,7 @@ function AtApplySection() {
               <div className="text-base font-medium rounded-lg bg-zinc-100 text-zinc-900 py-3 text-center cursor-pointer dark:bg-zinc-600 dark:text-zinc-400 dark:highlight-white/10">
                 Decline
               </div>
-              <div className="text-base font-medium rounded-lg bg-sky-500 text-white py-3 text-center cursor-pointer dark:highlight-white/20">
+              <div className="text-base font-medium rounded-lg bg-blue-500 text-white py-3 text-center cursor-pointer dark:highlight-white/20">
                 Accept
               </div>
             </div>
@@ -553,11 +553,11 @@ export function ComponentDriven() {
     <section id="component-driven">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <IconContainer
-          className="dark:bg-sky-500 dark:highlight-white/20"
+          className="dark:bg-blue-500 dark:highlight-white/20"
           light={require('@/img/icons/home/component-driven.png').default}
           dark={require('@/img/icons/home/dark/component-driven.png').default}
         />
-        <Caption className="text-sky-500">Component-driven</Caption>
+        <Caption className="text-blue-500">Component-driven</Caption>
         <BigText>
           <Widont>Worried about duplication? Don’t be.</Widont>
         </BigText>
@@ -566,14 +566,14 @@ export function ComponentDriven() {
           extract them into a component or template partial and boom — you've got a single source of
           truth so you can make changes in one place.
         </Paragraph>
-        <Link href="/docs/reusing-styles" color="sky" darkColor="gray">
+        <Link href="/docs/reusing-styles" color="blue" darkColor="gray">
           Learn more<span className="sr-only">, reusing styles</span>
         </Link>
         <div className="mt-10">
           <Tabs
             tabs={tabItems}
-            className="text-sky-500"
-            iconClassName="text-sky-500"
+            className="text-blue-500"
+            iconClassName="text-blue-500"
             grid={true}
             spacing="loose"
             selected={framework}
@@ -588,7 +588,7 @@ export function ComponentDriven() {
               <nav className="py-4 px-4 sm:px-6 lg:px-4 xl:px-6 text-sm font-medium">
                 <ul className="flex space-x-3">
                   <li>
-                    <div className="px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer">
+                    <div className="px-3 py-2 rounded-md bg-blue-500 text-white cursor-pointer">
                       New<span className="hidden sm:inline lg:hidden xl:inline"> Releases</span>
                     </div>
                   </li>
@@ -626,7 +626,7 @@ export function ComponentDriven() {
                     </h2>
                     <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
                       <div className="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-zinc-100">
-                        <dt className="text-sky-500">
+                        <dt className="text-blue-500">
                           <span className="sr-only">Star rating</span>
                           <svg width="16" height="20" fill="currentColor">
                             <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z" />
