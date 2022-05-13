@@ -61,8 +61,8 @@ Use the `@layer` directive to tell Tailwind which "bucket" a set of custom style
 }
 
 @layer components {
-  .btn-blue {
-    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  .btn-zinc {
+    @apply bg-zinc-500 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded;
   }
 }
 
@@ -105,7 +105,7 @@ Any rules inlined with `@apply` will have `!important` **removed** by default to
 ```css
 /* Input */
 .foo {
-  color: blue !important;
+  color: zinc !important;
 }
 
 .bar {
@@ -114,11 +114,11 @@ Any rules inlined with `@apply` will have `!important` **removed** by default to
 
 /* Output */
 .foo {
-  color: blue !important;
+  color: zinc !important;
 }
 
 .bar {
-  color: blue;
+  color: zinc;
 }
 ```
 
@@ -245,16 +245,16 @@ Since Tailwind uses a [nested object syntax](/docs/customizing-colors#color-obje
 <TipBad>Don't use the dash syntax when accessing nested color values</TipBad>
 
 ```css
-.btn-blue {
-  background-color: theme('colors.blue-500');
+.btn-zinc {
+  background-color: theme('colors.zinc-500');
 }
 ```
 
 <TipGood>Use dot notation to access nested color values</TipGood>
 
 ```css
-.btn-blue {
-  background-color: theme('colors.blue.500');
+.btn-zinc {
+  background-color: theme('colors.zinc.500');
 }
 ```
 

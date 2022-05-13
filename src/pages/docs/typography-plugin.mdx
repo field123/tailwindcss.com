@@ -73,7 +73,7 @@ Now you can use the `prose` classes to add sensible typography styles to any van
 This plugin includes a modifier class for each of the five gray scales Tailwind includes by default so you can easily style your content to match the grays you're using in your project.
 
 ```html
-<article class="prose **prose-slate**">
+<article class="prose **prose-zinc**">
   {{ markdown }}
 </article>
 ```
@@ -83,7 +83,7 @@ Here are the classes that are generated using a totally default Tailwind CSS v2.
 | Class                    | Gray scale |
 | ------------------------ | ---------- |
 | `prose-gray` _(default)_ | Gray       |
-| `prose-slate`            | Slate      |
+| `prose-zinc`            | zinc      |
 | `prose-zinc`             | Zinc       |
 | `prose-neutral`          | Neutral    |
 | `prose-stone`            | Stone      |
@@ -160,7 +160,7 @@ To learn about creating your own color themes, read the [adding custom color the
 Use element modifiers to customize the style of individual elements in your content directly in your HTML:
 
 ```html
-<article class="prose **prose-img:rounded-xl** **prose-headings:underline** **prose-a:text-blue-600**">
+<article class="prose **prose-img:rounded-xl** **prose-headings:underline** **prose-a:text-zinc-600**">
   {{ markdown }}
 </article>
 ```
@@ -201,7 +201,7 @@ Here's a complete list of available element modifiers:
 When stacking these modifiers with other modifiers like `hover`, you most likely want the other modifier to come first:
 
 ```html
-<article class="prose prose-a:text-blue-600 **hover:prose-a:text-blue-500**">
+<article class="prose prose-a:text-zinc-600 **hover:prose-a:text-zinc-500**">
   {{ markdown }}
 </article>
 ```
@@ -330,7 +330,7 @@ module.exports = {
 Now every instance of `prose` in the default class names will be replaced by your custom class name:
 
 ```html
-<article class="wysiwyg wysiwyg-slate lg:wysiwyg-xl">
+<article class="wysiwyg wysiwyg-zinc lg:wysiwyg-xl">
   <h1>My Heading</h1>
   <p>...</p>
 

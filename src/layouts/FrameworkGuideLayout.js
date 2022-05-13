@@ -8,10 +8,10 @@ export function FrameworkGuideLayout({ title, description, children }) {
           <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
             Installation
           </p>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight dark:text-zinc-200">
             {title}
           </h1>
-          <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">{description}</p>
+          <p className="mt-4 text-lg text-zinc-700 dark:text-zinc-400">{description}</p>
         </div>
       </header>
       <section className="mb-16 relative">{children}</section>

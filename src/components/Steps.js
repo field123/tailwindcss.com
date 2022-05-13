@@ -23,17 +23,17 @@ export function Steps({ steps, code, level = 2 }) {
           <li
             key={step.title}
             className={clsx(
-              'relative pl-10 xl:grid grid-cols-5 gap-16 before:content-[counter(step)] before:absolute before:left-0 before:flex before:items-center before:justify-center before:w-[calc(1.375rem+1px)] before:h-[calc(1.375rem+1px)] before:text-[0.625rem] before:font-bold before:text-slate-700 before:rounded-md before:shadow-sm before:ring-1 before:ring-slate-900/5 dark:before:bg-slate-700 dark:before:text-slate-200 dark:before:ring-0 dark:before:shadow-none dark:before:highlight-white/5',
+              'relative pl-10 xl:grid grid-cols-5 gap-16 before:content-[counter(step)] before:absolute before:left-0 before:flex before:items-center before:justify-center before:w-[calc(1.375rem+1px)] before:h-[calc(1.375rem+1px)] before:text-[0.625rem] before:font-bold before:text-zinc-700 before:rounded-md before:shadow-sm before:ring-1 before:ring-zinc-900/5 dark:before:bg-zinc-700 dark:before:text-zinc-200 dark:before:ring-0 dark:before:shadow-none dark:before:highlight-white/5',
               index !== steps.length - 1 &&
-                'pb-8 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-slate-200 dark:after:bg-slate-200/5'
+                'pb-8 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-zinc-200 dark:after:bg-zinc-200/5'
             )}
             style={{ counterIncrement: 'step' }}
           >
             <div className="mb-6 col-span-2 xl:mb-0">
-              <StepHeading className="text-sm leading-6 text-slate-900 font-semibold mb-2 dark:text-slate-200">
+              <StepHeading className="text-sm leading-6 text-zinc-900 font-semibold mb-2 dark:text-zinc-200">
                 {step.title}
               </StepHeading>
-              <div className="prose prose-slate prose-sm dark:prose-dark">
+              <div className="prose prose-zinc prose-sm dark:prose-dark">
                 <step.body />
               </div>
             </div>
@@ -64,7 +64,7 @@ function CopyButton({ code }) {
       <button
         type="button"
         className={clsx({
-          'text-slate-500 hover:text-slate-400': state === 'idle',
+          'text-zinc-500 hover:text-zinc-400': state === 'idle',
           'text-sky-400': state === 'copied',
         })}
         onClick={() => {
@@ -87,11 +87,11 @@ function CopyButton({ code }) {
         </svg>
       </button>
       <Transition
-        className="absolute bottom-full left-1/2 mb-3.5 pb-1 -translate-x-1/2"
+        className="absolute bottom-full left-1/2 mb-3.5 pb-1 -tranzinc-x-1/2"
         show={state === 'copied'}
         enter="transform ease-out duration-200 transition origin-bottom"
-        enterFrom="scale-95 translate-y-0.5 opacity-0"
-        enterTo="scale-100 translate-y-0 opacity-100"
+        enterFrom="scale-95 tranzinc-y-0.5 opacity-0"
+        enterTo="scale-100 tranzinc-y-0 opacity-100"
         leave="transition ease-in duration-100"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
@@ -122,7 +122,7 @@ function Code({ code, lang, pad }) {
   return (
     <pre
       className={clsx(
-        'text-sm leading-6 text-slate-50 flex ligatures-none',
+        'text-sm leading-6 text-zinc-50 flex ligatures-none',
         pad && 'overflow-auto'
       )}
     >
@@ -162,7 +162,7 @@ function Snippet({ code, highlightedCode }) {
   }
 
   return (
-    <div className="relative z-10 -ml-10 col-span-3 bg-slate-800 rounded-xl shadow-lg xl:ml-0 dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/10">
+    <div className="relative z-10 -ml-10 col-span-3 bg-zinc-800 rounded-xl shadow-lg xl:ml-0 dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/10">
       <TabBar name={code.name}>
         <CopyButton code={code.code} />
       </TabBar>
@@ -175,12 +175,12 @@ function Snippet({ code, highlightedCode }) {
 
 function TabBar({ name, children }) {
   return (
-    <div className="relative flex text-slate-400 text-xs leading-6">
+    <div className="relative flex text-zinc-400 text-xs leading-6">
       <div className="mt-2 flex-none text-sky-300 border-t border-b border-t-transparent border-b-sky-300 px-4 py-1 flex items-center">
         {name}
       </div>
       <div className="flex-auto flex pt-2 rounded-tr-xl overflow-hidden">
-        <div className="flex-auto -mr-px bg-slate-700/50 border border-slate-500/30 rounded-tl" />
+        <div className="flex-auto -mr-px bg-zinc-700/50 border border-zinc-500/30 rounded-tl" />
       </div>
       {children && (
         <div className="absolute top-2 right-0 h-8 flex items-center pr-4">{children}</div>

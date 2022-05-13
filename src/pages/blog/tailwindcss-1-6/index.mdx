@@ -75,13 +75,13 @@ These can be combined with responsive variants and pseudo-class variants as well
 
 ```html
 <!-- With responsive variants -->
-<div class="sm:motion-reduce:translate-y-0"></div>
+<div class="sm:motion-reduce:tranzinc-y-0"></div>
 
 <!-- With pseudo-class variants -->
-<div class="motion-reduce:hover:translate-y-0"></div>
+<div class="motion-reduce:hover:tranzinc-y-0"></div>
 
 <!-- With responsive and pseudo-class variants -->
-<div class="sm:motion-reduce:hover:translate-y-0"></div>
+<div class="sm:motion-reduce:hover:tranzinc-y-0"></div>
 ```
 
 These are currently not enabled for any utilities by default, but you can enabled them as needed in the `variants` section of your `tailwind.config.js` file:
@@ -90,7 +90,7 @@ These are currently not enabled for any utilities by default, but you can enable
 module.exports = {
   // ...
   variants: {
-    translate: ['responsive', 'hover', 'focus', 'motion-safe', 'motion-reduce'],
+    tranzinc: ['responsive', 'hover', 'focus', 'motion-safe', 'motion-reduce'],
   },
 }
 ```

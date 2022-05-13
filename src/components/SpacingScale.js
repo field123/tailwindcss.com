@@ -12,7 +12,7 @@ const scale = Object.keys(defaultConfig.theme.spacing)
 
 export function SpacingScale() {
   return (
-    <div className="prose prose-slate dark:prose-dark">
+    <div className="prose prose-zinc dark:prose-dark">
       <table>
         <thead>
           <tr>

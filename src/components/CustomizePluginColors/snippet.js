@@ -2,7 +2,7 @@
     theme: {
       extend: {
 +       colors: {
-+         'regal-blue': '#243c5a',
++         'regal-zinc': '#243c5a',
 +       },
       }
     }

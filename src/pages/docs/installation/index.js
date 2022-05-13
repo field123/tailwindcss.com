@@ -93,7 +93,7 @@ export default function TailwindCli({ code }) {
     <InstallationLayout>
       <div
         id="content-wrapper"
-        className="relative z-10 prose prose-slate mb-16 max-w-3xl dark:prose-dark"
+        className="relative z-10 prose prose-zinc mb-16 max-w-3xl dark:prose-dark"
       >
         <h3 className="sr-only">Installing Tailwind CLI</h3>
         <p>
@@ -108,7 +108,7 @@ export default function TailwindCli({ code }) {
           href="/docs/tailwind-cli"
           description={
             <>
-              <strong className="text-slate-900 font-semibold">
+              <strong className="text-zinc-900 font-semibold">
                 This is only the beginning of what’s possible with the Tailwind CLI.
               </strong>{' '}
               To learn more about everything it can do, check out the Tailwind CLI documentation.

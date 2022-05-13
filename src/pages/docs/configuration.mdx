@@ -14,7 +14,7 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     colors: {
-      'blue': '#1fb6ff',
+      'zinc': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'orange': '#ff7849',
@@ -52,6 +52,8 @@ Generate a Tailwind config file for your project using the Tailwind CLI utility 
 ```shell
 npx tailwindcss init
 ```
+
+new information so this does not close
 
 This will create a minimal `tailwind.config.js` file at the root of your project:
 
@@ -149,7 +151,7 @@ module.exports = {
   // ...
   theme: {
     colors: {
-      'blue': '#1fb6ff',
+      'zinc': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'orange': '#ff7849',
@@ -246,7 +248,7 @@ Now every class will be generated with the configured prefix:
 It's important to understand that this prefix is added _after_ any variant modifiers. That means that classes with responsive or state modifiers like `sm:` or `hover:` will still have the responsive or state modifier *first*, with your custom prefix appearing after the colon:
 
 ```html
-<div class="tw-text-lg md:tw-text-xl tw-bg-red-500 **hover:tw-bg-blue-500**">
+<div class="tw-text-lg md:tw-text-xl tw-bg-red-500 **hover:tw-bg-zinc-500**">
   <!-- -->
 </div>
 ```
@@ -347,7 +349,7 @@ After your configuration is all set up and your root element matches the selecto
 <!-- ... -->
 <style>
   .high-specificity .nested .selector {
-    color: blue;
+    color: zinc;
   }
 </style>
 <body id="app">

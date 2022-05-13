@@ -166,14 +166,14 @@ function ComponentExample({ framework }) {
           className="flex-none overflow-auto whitespace-nowrap flex"
         >
           <div className="relative flex-none min-w-full px-1">
-            <ul className="flex text-sm leading-6 text-slate-400">
+            <ul className="flex text-sm leading-6 text-zinc-400">
               {Object.keys(tabs[framework]).map((tab, tabIndex) => (
                 <li key={tab} className="flex-none">
                   <button
                     type="button"
                     className={clsx(
                       'relative py-2 px-3',
-                      tabIndex === activeTab ? 'text-sky-300' : 'hover:text-slate-300'
+                      tabIndex === activeTab ? 'text-sky-300' : 'hover:text-zinc-300'
                     )}
                     onClick={() => setActiveTab(tabIndex)}
                   >
@@ -185,7 +185,7 @@ function ComponentExample({ framework }) {
                 </li>
               ))}
             </ul>
-            <div className="absolute bottom-0 inset-x-0 h-px bg-slate-500/30" />
+            <div className="absolute bottom-0 inset-x-0 h-px bg-zinc-500/30" />
           </div>
         </motion.div>
       </AnimatePresence>
@@ -266,7 +266,7 @@ function ComponentExample({ framework }) {
 function ApplyExample({ inView }) {
   return (
     <CodeWindow className="!h-auto !max-h-[none]" border={false}>
-      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-slate-500/30">
+      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-zinc-500/30">
         <span className="-mb-px py-2 border-b border-b-current">styles.css</span>
       </h3>
       <div className="flex-none">
@@ -291,7 +291,7 @@ function ApplyExample({ inView }) {
           ))}
         </CodeWindow.Code2>
       </div>
-      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-slate-500/30">
+      <h3 className="pl-4 flex text-sm leading-6 text-sky-300 border-b border-zinc-500/30">
         <span className="-mb-px py-2 border-b border-b-current">index.html</span>
       </h3>
       <div className="overflow-hidden">
@@ -329,7 +329,7 @@ function AtApplySection() {
   return (
     <div className="mt-20 relative max-w-7xl mx-auto px-4 sm:mt-32 sm:px-6 md:px-8 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:grid-rows-1">
       <div className="lg:col-span-7 xl:col-span-6 lg:row-end-1">
-        <h3 className="text-3xl text-slate-900 font-extrabold dark:text-slate-200">
+        <h3 className="text-3xl text-zinc-900 font-extrabold dark:text-zinc-200">
           Not into component frameworks?
         </h3>
         <Paragraph>
@@ -344,18 +344,18 @@ function AtApplySection() {
       <div className="pt-10 lg:col-span-5 xl:col-span-6 lg:row-start-1 lg:row-end-2">
         <div
           ref={ref}
-          className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/10"
+          className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:highlight-white/10"
         >
           <article>
             <h2
               className={clsx(
-                'text-lg font-semibold text-slate-900 pt-4 pb-2 px-4 sm:px-6 lg:px-4 xl:px-6 dark:text-slate-100',
+                'text-lg font-semibold text-zinc-900 pt-4 pb-2 px-4 sm:px-6 lg:px-4 xl:px-6 dark:text-zinc-100',
                 ...fade
               )}
             >
               Weekly one-on-one
             </h2>
-            <dl className="flex flex-wrap divide-y divide-slate-200 border-b border-slate-200 text-sm sm:text-base lg:text-sm xl:text-base dark:divide-slate-200/5 dark:border-slate-200/5">
+            <dl className="flex flex-wrap divide-y divide-zinc-200 border-b border-zinc-200 text-sm sm:text-base lg:text-sm xl:text-base dark:divide-zinc-200/5 dark:border-zinc-200/5">
               <div className="px-4 sm:px-6 lg:px-4 xl:px-6 pb-4">
                 <dt className="sr-only">Date and time</dt>
                 <dd className={clsx(...fade)}>
@@ -368,7 +368,7 @@ function AtApplySection() {
               <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
                 <dt
                   className={clsx(
-                    'w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300',
+                    'w-2/5 sm:w-1/4 flex-none text-zinc-900 font-medium dark:text-zinc-300',
                     ...fade
                   )}
                 >
@@ -381,7 +381,7 @@ function AtApplySection() {
               <div className="w-full flex-none flex items-center p-4 sm:p-6 lg:p-4 xl:p-6">
                 <dt
                   className={clsx(
-                    'w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300',
+                    'w-2/5 sm:w-1/4 flex-none text-zinc-900 font-medium dark:text-zinc-300',
                     ...fade
                   )}
                 >
@@ -392,7 +392,7 @@ function AtApplySection() {
               <div className="w-full flex-none flex items-center p-4 sm:py-5 sm:px-6 lg:p-4 xl:py-5 xl:px-6">
                 <dt
                   className={clsx(
-                    'w-2/5 sm:w-1/4 flex-none text-slate-900 font-medium dark:text-slate-300',
+                    'w-2/5 sm:w-1/4 flex-none text-zinc-900 font-medium dark:text-zinc-300',
                     ...fade
                   )}
                 >
@@ -400,7 +400,7 @@ function AtApplySection() {
                 </dt>
                 <dd
                   className={clsx(
-                    'text-sm font-medium text-slate-700 bg-slate-100 rounded-full py-1 px-3 dark:bg-slate-700 dark:text-slate-300',
+                    'text-sm font-medium text-zinc-700 bg-zinc-100 rounded-full py-1 px-3 dark:bg-zinc-700 dark:text-zinc-300',
                     ...fade
                   )}
                 >
@@ -409,7 +409,7 @@ function AtApplySection() {
               </div>
             </dl>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 lg:gap-x-4 xl:gap-x-6 p-4 sm:px-6 sm:py-5 lg:p-4 xl:px-6 xl:py-5">
-              <div className="text-base font-medium rounded-lg bg-slate-100 text-slate-900 py-3 text-center cursor-pointer dark:bg-slate-600 dark:text-slate-400 dark:highlight-white/10">
+              <div className="text-base font-medium rounded-lg bg-zinc-100 text-zinc-900 py-3 text-center cursor-pointer dark:bg-zinc-600 dark:text-zinc-400 dark:highlight-white/10">
                 Decline
               </div>
               <div className="text-base font-medium rounded-lg bg-sky-500 text-white py-3 text-center cursor-pointer dark:highlight-white/20">
@@ -584,7 +584,7 @@ export function ComponentDriven() {
       <GridLockup.Container className="mt-10 xl:mt-2" beams={8}>
         <GridLockup.Grid
           left={
-            <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 divide-y divide-slate-100 my-auto xl:mt-18 dark:bg-slate-800 dark:divide-slate-200/5 dark:highlight-white/10">
+            <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-zinc-900/5 divide-y divide-zinc-100 my-auto xl:mt-18 dark:bg-zinc-800 dark:divide-zinc-200/5 dark:highlight-white/10">
               <nav className="py-4 px-4 sm:px-6 lg:px-4 xl:px-6 text-sm font-medium">
                 <ul className="flex space-x-3">
                   <li>
@@ -593,12 +593,12 @@ export function ComponentDriven() {
                     </div>
                   </li>
                   <li>
-                    <div className="px-3 py-2 rounded-md bg-slate-50 cursor-pointer dark:bg-transparent dark:text-slate-300 dark:ring-1 dark:ring-slate-700">
+                    <div className="px-3 py-2 rounded-md bg-zinc-50 cursor-pointer dark:bg-transparent dark:text-zinc-300 dark:ring-1 dark:ring-zinc-700">
                       Top<span className="hidden sm:inline"> Rated</span>
                     </div>
                   </li>
                   <li>
-                    <div className="px-3 py-2 rounded-md bg-slate-50 cursor-pointer dark:bg-transparent dark:text-slate-300 dark:ring-1 dark:ring-slate-700">
+                    <div className="px-3 py-2 rounded-md bg-zinc-50 cursor-pointer dark:bg-transparent dark:text-zinc-300 dark:ring-1 dark:ring-zinc-700">
                       Vincent’s Picks
                     </div>
                   </li>
@@ -618,14 +618,14 @@ export function ComponentDriven() {
                     alt=""
                     width="60"
                     height="88"
-                    className="flex-none rounded-md bg-slate-100"
+                    className="flex-none rounded-md bg-zinc-100"
                   />
                   <div className="min-w-0 relative flex-auto">
-                    <h2 className="font-semibold text-slate-900 truncate sm:pr-20 dark:text-slate-100">
+                    <h2 className="font-semibold text-zinc-900 truncate sm:pr-20 dark:text-zinc-100">
                       {title}
                     </h2>
                     <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
-                      <div className="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
+                      <div className="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-zinc-100">
                         <dt className="text-sky-500">
                           <span className="sr-only">Star rating</span>
                           <svg width="16" height="20" fill="currentColor">
@@ -634,9 +634,9 @@ export function ComponentDriven() {
                         </dt>
                         <dd>{starRating}</dd>
                       </div>
-                      <div className="dark:text-slate-200">
+                      <div className="dark:text-zinc-200">
                         <dt className="sr-only">Rating</dt>
-                        <dd className="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">
+                        <dd className="px-1.5 ring-1 ring-zinc-200 rounded dark:ring-zinc-600">
                           {rating}
                         </dd>
                       </div>
@@ -651,7 +651,7 @@ export function ComponentDriven() {
                             width="2"
                             height="2"
                             fill="currentColor"
-                            className="mx-2 text-slate-300"
+                            className="mx-2 text-zinc-300"
                             aria-hidden="true"
                           >
                             <circle cx="1" cy="1" r="1" />
@@ -666,7 +666,7 @@ export function ComponentDriven() {
                             width="2"
                             height="2"
                             fill="currentColor"
-                            className="mx-2 text-slate-300"
+                            className="mx-2 text-zinc-300"
                             aria-hidden="true"
                           >
                             <circle cx="1" cy="1" r="1" />
@@ -676,7 +676,7 @@ export function ComponentDriven() {
                       </div>
                       <div className="flex-none w-full mt-2 font-normal">
                         <dt className="sr-only">Cast</dt>
-                        <dd className="text-slate-400">{cast}</dd>
+                        <dd className="text-zinc-400">{cast}</dd>
                       </div>
                     </dl>
                   </div>

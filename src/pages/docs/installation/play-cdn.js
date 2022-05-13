@@ -136,7 +136,7 @@ export default function PlayCdn({ code }) {
     <InstallationLayout>
       <div
         id="content-wrapper"
-        className="relative z-10 prose prose-slate mb-16 max-w-3xl dark:prose-dark"
+        className="relative z-10 prose prose-zinc mb-16 max-w-3xl dark:prose-dark"
       >
         <h3 className="sr-only">Play CDN</h3>
         <p>

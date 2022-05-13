@@ -61,7 +61,7 @@ function DarkModeSwitch({ enabled, onChange }) {
       className={clsx(
         'relative inline-flex items-center py-1.5 px-2 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none',
         enabled
-          ? 'bg-slate-700 text-slate-400 focus-visible:ring-slate-500'
+          ? 'bg-zinc-700 text-zinc-400 focus-visible:ring-zinc-500'
           : 'bg-cyan-500 text-cyan-200 focus-visible:ring-cyan-600'
       )}
     >
@@ -81,7 +81,7 @@ function DarkModeSwitch({ enabled, onChange }) {
       <span
         className={clsx(
           'absolute top-0.5 left-0.5 bg-white w-8 h-8 rounded-full flex items-center justify-center transition duration-500 transform',
-          enabled ? 'translate-x-[2.625rem]' : ''
+          enabled ? 'tranzinc-x-[2.625rem]' : ''
         )}
       >
         <Sun
@@ -92,7 +92,7 @@ function DarkModeSwitch({ enabled, onChange }) {
         />
         <Moon
           className={clsx(
-            'flex-none -ml-6 transition duration-500 transform text-slate-700',
+            'flex-none -ml-6 transition duration-500 transform text-zinc-700',
             enabled ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
           )}
         />
@@ -108,11 +108,11 @@ export function DarkMode() {
     <section id="dark-mode">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <IconContainer
-          className="dark:bg-slate-600 dark:highlight-white/20"
+          className="dark:bg-zinc-600 dark:highlight-white/20"
           light={require('@/img/icons/home/dark-mode.png').default}
           dark={require('@/img/icons/home/dark/dark-mode.png').default}
         />
-        <Caption className="text-slate-500">Dark mode</Caption>
+        <Caption className="text-zinc-500">Dark mode</Caption>
         <BigText>
           <Widont>Now with Dark Mode.</Widont>
         </BigText>

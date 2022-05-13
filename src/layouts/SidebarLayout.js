@@ -15,10 +15,10 @@ const NavItem = forwardRef(({ href, children, isActive, isPublished, fallbackHre
         <a
           className={clsx('block border-l pl-4 -ml-px', {
             'text-sky-500 border-current font-semibold dark:text-sky-400': isActive,
-            'border-transparent hover:border-slate-400 dark:hover:border-slate-500': !isActive,
-            'text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300':
+            'border-transparent hover:border-zinc-400 dark:hover:border-zinc-500': !isActive,
+            'text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300':
               !isActive && isPublished,
-            'text-slate-400': !isActive && !isPublished,
+            'text-zinc-400': !isActive && !isPublished,
           })}
         >
           {children}
@@ -98,9 +98,9 @@ function Nav({ nav, children, fallbackHref, mobile = false }) {
   return (
     <nav ref={scrollRef} id="nav" className="lg:text-sm lg:leading-6 relative">
       <div className="sticky top-0 -ml-0.5 pointer-events-none">
-        {!mobile && <div className="h-10 bg-white dark:bg-slate-900" />}
-        <div className="bg-white dark:bg-slate-900 relative pointer-events-auto">
-          <SearchButton className="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
+        {!mobile && <div className="h-10 bg-white dark:bg-zinc-900" />}
+        <div className="bg-white dark:bg-zinc-900 relative pointer-events-auto">
+          <SearchButton className="hidden w-full lg:flex items-center text-sm leading-6 text-zinc-400 rounded-md ring-1 ring-zinc-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-zinc-300 dark:bg-zinc-800 dark:highlight-white/5 dark:hover:bg-zinc-700">
             {({ actionKey }) => (
               <>
                 <svg
@@ -137,7 +137,7 @@ function Nav({ nav, children, fallbackHref, mobile = false }) {
             )}
           </SearchButton>
         </div>
-        {!mobile && <div className="h-8 bg-gradient-to-b from-white dark:from-slate-900" />}
+        {!mobile && <div className="h-8 bg-gradient-to-b from-white dark:from-zinc-900" />}
       </div>
       <ul>
         <TopLevelNav mobile={mobile} />
@@ -151,16 +151,16 @@ function Nav({ nav, children, fallbackHref, mobile = false }) {
                 <li key={category} className="mt-12 lg:mt-8">
                   <h5
                     className={clsx('mb-8 lg:mb-3 font-semibold', {
-                      'text-slate-900 dark:text-slate-200': publishedItems.length > 0,
-                      'text-slate-400': publishedItems.length === 0,
+                      'text-zinc-900 dark:text-zinc-200': publishedItems.length > 0,
+                      'text-zinc-400': publishedItems.length === 0,
                     })}
                   >
                     {category}
                   </h5>
                   <ul
                     className={clsx(
-                      'space-y-6 lg:space-y-2 border-l border-slate-100',
-                      mobile ? 'dark:border-slate-700' : 'dark:border-slate-800'
+                      'space-y-6 lg:space-y-2 border-l border-zinc-100',
+                      mobile ? 'dark:border-zinc-700' : 'dark:border-zinc-800'
                     )}
                   >
                     {(fallbackHref ? nav[category] : publishedItems).map((item, i) => {
@@ -206,18 +206,18 @@ const TopLevelAnchor = forwardRef(
             className,
             isActive
               ? 'font-semibold text-sky-500 dark:text-sky-400'
-              : 'font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300'
+              : 'font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300'
           )}
         >
           <div
             className={clsx(
-              'mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10',
+              'mr-4 rounded-md ring-1 ring-zinc-900/5 shadow-sm group-hover:shadow group-hover:ring-zinc-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10',
               shadow,
               isActive
                 ? [activeBackground, 'dark:highlight-white/10']
                 : mobile
-                ? 'dark:bg-slate-700 dark:highlight-white/5'
-                : 'dark:bg-slate-800 dark:highlight-white/5'
+                ? 'dark:bg-zinc-700 dark:highlight-white/5'
+                : 'dark:bg-zinc-800 dark:highlight-white/5'
             )}
           >
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
@@ -265,7 +265,7 @@ function TopLevelNav({ mobile }) {
                 'fill-sky-200 group-hover:fill-sky-500',
                 pathname.startsWith('/docs')
                   ? 'dark:fill-sky-300 dark:group-hover:fill-sky-300'
-                  : 'dark:fill-slate-400 dark:group-hover:fill-sky-300'
+                  : 'dark:fill-zinc-400 dark:group-hover:fill-sky-300'
               )}
             />
             <path
@@ -276,7 +276,7 @@ function TopLevelNav({ mobile }) {
                 'fill-sky-400 group-hover:fill-sky-500',
                 pathname.startsWith('/docs')
                   ? 'dark:fill-sky-200 dark:group-hover:fill-sky-200'
-                  : 'dark:fill-slate-600 dark:group-hover:fill-sky-200'
+                  : 'dark:fill-zinc-600 dark:group-hover:fill-sky-200'
               )}
             />
           </>
@@ -295,21 +295,21 @@ function TopLevelNav({ mobile }) {
               d="m6 9 6-3 6 3v6l-6 3-6-3V9Z"
               className={clsx(
                 'fill-indigo-100 group-hover:fill-indigo-200',
-                mobile ? 'dark:fill-slate-300' : 'dark:fill-slate-400'
+                mobile ? 'dark:fill-zinc-300' : 'dark:fill-zinc-400'
               )}
             />
             <path
               d="m6 9 6 3v7l-6-3V9Z"
               className={clsx(
                 'fill-indigo-300 group-hover:fill-indigo-400 dark:group-hover:fill-indigo-300',
-                mobile ? 'dark:fill-slate-400' : 'dark:fill-slate-500'
+                mobile ? 'dark:fill-zinc-400' : 'dark:fill-zinc-500'
               )}
             />
             <path
               d="m18 9-6 3v7l6-3V9Z"
               className={clsx(
                 'fill-indigo-400 group-hover:fill-indigo-500 dark:group-hover:fill-indigo-400',
-                mobile ? 'dark:fill-slate-500' : 'dark:fill-slate-600'
+                mobile ? 'dark:fill-zinc-500' : 'dark:fill-zinc-600'
               )}
             />
           </>
@@ -330,14 +330,14 @@ function TopLevelNav({ mobile }) {
               d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
               className={clsx(
                 'fill-pink-400 group-hover:fill-pink-500 dark:group-hover:fill-pink-300',
-                mobile ? 'dark:fill-slate-500' : 'dark:fill-slate-600'
+                mobile ? 'dark:fill-zinc-500' : 'dark:fill-zinc-600'
               )}
             />
             <path
               d="M11.082 9.107a.685.685 0 0 0-.72-.01.757.757 0 0 0-.362.653v4.5c0 .27.138.52.362.653.224.133.5.13.72-.01l3.571-2.25A.758.758 0 0 0 15 12a.758.758 0 0 0-.347-.643l-3.571-2.25Z"
               className={clsx(
                 'fill-pink-50 group-hover:fill-pink-100 dark:group-hover:fill-white',
-                mobile ? 'dark:fill-slate-300' : 'dark:fill-slate-400'
+                mobile ? 'dark:fill-zinc-300' : 'dark:fill-zinc-400'
               )}
             />
           </>
@@ -349,14 +349,14 @@ function TopLevelNav({ mobile }) {
         mobile={mobile}
         href="https://play.tailwindcss.com"
         className="mb-4"
-        shadow="group-hover:shadow-blue-200 dark:group-hover:bg-blue-500"
+        shadow="group-hover:shadow-zinc-200 dark:group-hover:bg-zinc-500"
         icon={
           <>
             <path
               d="M4 12a7 7 0 0 1 7-7h2a7 7 0 1 1 0 14h-2a7 7 0 0 1-7-7Z"
               className={clsx(
-                'fill-blue-400 group-hover:fill-blue-500 dark:group-hover:fill-blue-400',
-                mobile ? 'dark:fill-slate-500' : 'dark:fill-slate-600'
+                'fill-zinc-400 group-hover:fill-zinc-500 dark:group-hover:fill-zinc-400',
+                mobile ? 'dark:fill-zinc-500' : 'dark:fill-zinc-600'
               )}
             />
             <path
@@ -365,8 +365,8 @@ function TopLevelNav({ mobile }) {
               strokeLinecap="round"
               strokeLinejoin="round"
               className={clsx(
-                'stroke-blue-50 dark:stroke-slate-400 dark:group-hover:stroke-white',
-                mobile ? 'dark:stroke-slate-300' : 'dark:stroke-slate-400'
+                'stroke-zinc-50 dark:stroke-zinc-400 dark:group-hover:stroke-white',
+                mobile ? 'dark:stroke-zinc-300' : 'dark:stroke-zinc-400'
               )}
             />
             <path
@@ -375,8 +375,8 @@ function TopLevelNav({ mobile }) {
               strokeLinecap="round"
               strokeLinejoin="round"
               className={clsx(
-                'stroke-blue-200 dark:group-hover:stroke-white',
-                mobile ? 'dark:stroke-slate-300' : 'dark:stroke-slate-400'
+                'stroke-zinc-200 dark:group-hover:stroke-white',
+                mobile ? 'dark:stroke-zinc-300' : 'dark:stroke-zinc-400'
               )}
             />
           </>
@@ -400,8 +400,8 @@ function TopLevelNav({ mobile }) {
                 pathname === '/resources'
                   ? 'dark:fill-purple-300 dark:group-hover:fill-purple-300'
                   : mobile
-                  ? 'dark:fill-slate-500'
-                  : 'dark:fill-slate-600'
+                  ? 'dark:fill-zinc-500'
+                  : 'dark:fill-zinc-600'
               )}
             />
             <path
@@ -411,8 +411,8 @@ function TopLevelNav({ mobile }) {
                 pathname === '/resources'
                   ? 'dark:fill-white dark:group-hover:fill-white'
                   : mobile
-                  ? 'dark:fill-slate-300'
-                  : 'dark:fill-slate-400'
+                  ? 'dark:fill-zinc-300'
+                  : 'dark:fill-zinc-400'
               )}
             />
             <path
@@ -422,8 +422,8 @@ function TopLevelNav({ mobile }) {
                 pathname === '/resources'
                   ? 'dark:fill-purple-300 dark:group-hover:fill-purple-300'
                   : mobile
-                  ? 'dark:fill-slate-500'
-                  : 'dark:fill-slate-600'
+                  ? 'dark:fill-zinc-500'
+                  : 'dark:fill-zinc-600'
               )}
             />
           </>
@@ -444,7 +444,7 @@ function TopLevelNav({ mobile }) {
               d="M11 5a6 6 0 0 0-4.687 9.746c.215.27.315.62.231.954l-.514 2.058a1 1 0 0 0 1.485 1.1l2.848-1.71c.174-.104.374-.15.576-.148H13a6 6 0 0 0 0-12h-2Z"
               className={clsx(
                 'fill-violet-400 group-hover:fill-violet-500 dark:group-hover:fill-violet-300',
-                mobile ? 'dark:fill-slate-500' : 'dark:fill-slate-600'
+                mobile ? 'dark:fill-zinc-500' : 'dark:fill-zinc-600'
               )}
             />
             <circle
@@ -453,7 +453,7 @@ function TopLevelNav({ mobile }) {
               r="1"
               className={clsx(
                 'fill-white dark:group-hover:fill-white',
-                mobile ? 'dark:fill-slate-300' : 'dark:fill-slate-400'
+                mobile ? 'dark:fill-zinc-300' : 'dark:fill-zinc-400'
               )}
             />
             <circle
@@ -462,7 +462,7 @@ function TopLevelNav({ mobile }) {
               r="1"
               className={clsx(
                 'fill-violet-200 dark:group-hover:fill-white',
-                mobile ? 'dark:fill-slate-300' : 'dark:fill-slate-400'
+                mobile ? 'dark:fill-zinc-300' : 'dark:fill-zinc-400'
               )}
             />
             <circle
@@ -470,7 +470,7 @@ function TopLevelNav({ mobile }) {
               cy="11"
               r="1"
               className={clsx(
-                'fill-violet-200 dark:fill-slate-400 dark:group-hover:fill-white',
+                'fill-violet-200 dark:fill-zinc-400 dark:group-hover:fill-white',
                 mobile ? '' : ''
               )}
             />
@@ -514,12 +514,12 @@ export function SidebarLayout({
         onClose={() => setNavIsOpen(false)}
         className="fixed z-50 inset-0 overflow-y-auto lg:hidden"
       >
-        <Dialog.Overlay className="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80" />
-        <div className="relative bg-white w-80 max-w-[calc(100%-3rem)] p-6 dark:bg-slate-800">
+        <Dialog.Overlay className="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-zinc-900/80" />
+        <div className="relative bg-white w-80 max-w-[calc(100%-3rem)] p-6 dark:bg-zinc-800">
           <button
             type="button"
             onClick={() => setNavIsOpen(false)}
-            className="absolute z-10 top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+            className="absolute z-10 top-5 right-5 w-8 h-8 flex items-center justify-center text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300"
           >
             <span className="sr-only">Close navigation</span>
             <svg viewBox="0 0 10 10" className="w-2.5 h-2.5 overflow-visible">

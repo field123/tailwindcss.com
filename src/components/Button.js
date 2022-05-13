@@ -14,20 +14,20 @@ let colors = {
     'bg-sky-50 text-sky-600 hover:bg-sky-100 hover:text-sky-700 focus:ring-sky-600',
     'text-sky-300 group-hover:text-sky-400',
   ],
-  blue: [
-    'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 focus:ring-blue-600',
-    'text-blue-300 group-hover:text-blue-400',
+  zinc: [
+    'bg-zinc-50 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-700 focus:ring-zinc-600',
+    'text-zinc-300 group-hover:text-zinc-400',
   ],
   gray: [
-    'bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500',
-    'text-slate-300 group-hover:text-slate-400',
+    'bg-zinc-100 text-zinc-700 hover:bg-zinc-200 hover:text-zinc-900 focus:ring-zinc-500',
+    'text-zinc-300 group-hover:text-zinc-400',
   ],
 }
 
 let colorsDark = {
   gray: [
-    'dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500',
-    'dark:text-slate-500 dark:group-hover:text-slate-400',
+    'dark:bg-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-600 dark:hover:text-white dark:focus:ring-zinc-500',
+    'dark:text-zinc-500 dark:group-hover:text-zinc-400',
   ],
   sky: [
     'dark:bg-sky-500 dark:text-sky-50 dark:hover:bg-sky-400 dark:hover:text-white dark:focus:ring-sky-200',

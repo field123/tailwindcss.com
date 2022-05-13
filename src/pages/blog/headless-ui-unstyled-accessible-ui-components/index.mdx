@@ -30,18 +30,18 @@ import { Menu } from '@headlessui/react'
 function MyDropdown() {
   return (
     <Menu as="div" className="relative">
-      <Menu.Button className="px-4 py-2 rounded bg-blue-600 text-white ...">Options</Menu.Button>
+      <Menu.Button className="px-4 py-2 rounded bg-zinc-600 text-white ...">Options</Menu.Button>
       <Menu.Items className="absolute mt-1 right-0">
         <Menu.Item>
           {({ active }) => (
-            <a className={`${active && 'bg-blue-500 text-white'} ...`} href="/account-settings">
+            <a className={`${active && 'bg-zinc-500 text-white'} ...`} href="/account-settings">
               Account settings
             </a>
           )}
         </Menu.Item>
         <Menu.Item>
           {({ active }) => (
-            <a className={`${active && 'bg-blue-500 text-white'} ...`} href="/documentation">
+            <a className={`${active && 'bg-zinc-500 text-white'} ...`} href="/documentation">
               Documentation
             </a>
           )}

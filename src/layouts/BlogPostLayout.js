@@ -16,10 +16,10 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
       <div className="max-w-8xl mx-auto">
         <div className="flex px-4 pt-8 pb-10 lg:px-8">
           <Link href="/blog">
-            <a className="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+            <a className="group flex font-semibold text-sm leading-6 text-zinc-700 hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-white">
               <svg
                 viewBox="0 -9 3 24"
-                className="overflow-visible mr-3 text-slate-400 w-auto h-6 group-hover:text-slate-600 dark:group-hover:text-slate-300"
+                className="overflow-visible mr-3 text-zinc-400 w-auto h-6 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
               >
                 <path
                   d="M3 0L0 3L3 6"
@@ -42,7 +42,7 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
               <Metadata meta={meta} />
               <h1
                 className={clsx(
-                  'text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl'
+                  'text-2xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-200 md:text-3xl'
                 )}
               >
                 <Widont>{meta.title}</Widont>
@@ -51,7 +51,7 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                 <dl>
                   <dt className="sr-only">Date</dt>
                   <dd
-                    className={clsx('absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400')}
+                    className={clsx('absolute top-0 inset-x-0 text-zinc-700 dark:text-zinc-400')}
                   >
                     <time dateTime={meta.date}>
                       {formatDate(meta.date, '{dddd}, {MMMM} {DD}, {YYYY}')}
@@ -69,10 +69,10 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                       <img
                         src={author.avatar}
                         alt=""
-                        className="mr-3 w-9 h-9 rounded-full bg-slate-50 dark:bg-slate-800"
+                        className="mr-3 w-9 h-9 rounded-full bg-zinc-50 dark:bg-zinc-800"
                       />
                       <div className="text-sm leading-4">
-                        <div className="text-slate-900 dark:text-slate-200">{author.name}</div>
+                        <div className="text-zinc-900 dark:text-zinc-200">{author.name}</div>
                         <div className="mt-1">
                           <a
                             href={`https://twitter.com/${author.twitter}`}
@@ -86,7 +86,7 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                   ))}
                 </ul>
               </div>
-              <div className={clsx('mt-12 prose prose-slate dark:prose-dark')}>
+              <div className={clsx('mt-12 prose prose-zinc dark:prose-dark')}>
                 <MDXProvider components={mdxComponents}>{children}</MDXProvider>
               </div>
             </article>
@@ -105,8 +105,8 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                 className="absolute top-px -left-1/4 sm:left-0 hidden dark:block max-w-none"
                 width="1429"
               />
-              <section className="relative py-16 border-t border-slate-200 dark:border-slate-200/5">
-                <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+              <section className="relative py-16 border-t border-zinc-200 dark:border-zinc-200/5">
+                <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">
                   Get all of our updates directly to your&nbsp;inbox.
                   <br />
                   Sign up for our newsletter.
@@ -115,8 +115,8 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                   <NewsletterForm action="https://app.convertkit.com/forms/3181881/subscriptions" />
                 </div>
               </section>
-              <section className="relative pt-16 border-t border-slate-200 dark:border-slate-200/5">
-                <h2 className="mb-6 font-semibold text-slate-900 dark:text-slate-200">
+              <section className="relative pt-16 border-t border-zinc-200 dark:border-zinc-200/5">
+                <h2 className="mb-6 font-semibold text-zinc-900 dark:text-zinc-200">
                   Latest articles
                 </h2>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2">
@@ -125,14 +125,14 @@ export function BlogPostLayout({ children, meta, slug, latestPosts }) {
                     .slice(0, 2)
                     .map((post) => (
                       <article key={post.slug} className="flex flex-col items-start">
-                        <h3 className="order-1 text-lg text-slate-900 font-semibold dark:text-slate-200">
+                        <h3 className="order-1 text-lg text-zinc-900 font-semibold dark:text-zinc-200">
                           <Link href={`/blog/${post.slug}`}>
                             <a>{post.title}</a>
                           </Link>
                         </h3>
                         <time
                           dateTime={post.date}
-                          className="text-sm leading-7 dark:text-slate-400"
+                          className="text-sm leading-7 dark:text-zinc-400"
                         >
                           {formatDate(post.date, '{MMMM} {DD}, {YYYY}')}
                         </time>

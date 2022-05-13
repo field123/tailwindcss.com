@@ -93,7 +93,7 @@ _This feature is only available in [Just-in-Time mode](https://tailwindcss.com/d
 People have been asking for this for years and it's finally here! We've added first-party support for styling pseudo-elements like `before` and `after`:
 
 ```html
-<div class="before:block before:bg-blue-500 after:flex after:bg-pink-300"></div>
+<div class="before:block before:bg-zinc-500 after:flex after:bg-pink-300"></div>
 ```
 
 We set `content: ""` automatically any time you use a `before` or `after` variant to make sure the elements are rendered, but you can override it using the new `content` utilities which have full arbitrary value support:
@@ -201,7 +201,7 @@ This is useful for things like styling an element when a preceding checkbox is c
 ```html
 <label>
   <input type="checkbox" class="peer sr-only">
-  <span class="h-4 w-4 bg-gray-200 peer-checked:bg-blue-500">
+  <span class="h-4 w-4 bg-gray-200 peer-checked:bg-zinc-500">
   <!-- ... -->
 </label>
 ```
@@ -211,7 +211,7 @@ Just like `group` can be combined with any other variant, `peer` can as well, so
 The generated CSS uses the [general sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) and looks like this:
 
 ```css
-.peer:checked ~ .peer-checked\:bg-blue-500 {
+.peer:checked ~ .peer-checked\:bg-zinc-500 {
   background-color: #3b82f6;
 }
 ```
@@ -435,8 +435,8 @@ Now those features are automatically enabled any time you use any of the relevan
 It's important to understand though that because these utilities aren't needed anymore, you can no longer expect transforms and filters to be "dormant" by default. If you were relying on conditionally "activating" transforms or filters by toggling these classes, you will want to make sure you are toggling the sub-utilities themselves instead:
 
 ```diff-html
-- <div class="scale-105 -translate-y-1 hover:transform">
-+ <div class="hover:scale-105 hover:-translate-y-1">
+- <div class="scale-105 -tranzinc-y-1 hover:transform">
++ <div class="hover:scale-105 hover:-tranzinc-y-1">
 ```
 
 I don't expect this will be a real problem for most people, but it's technically a breaking change which is why we've limited this improvement to the JIT engine only.
@@ -451,7 +451,7 @@ Requested at least once a month for the last four years, I'm excited to share th
 
 ```html
 <div
-  class="border-2 border-t-blue-500 border-r-pink-500 border-b-green-500 border-l-yellow-500"
+  class="border-2 border-t-zinc-500 border-r-pink-500 border-b-green-500 border-l-yellow-500"
 >
   <!-- ... -->
 </div>
@@ -472,7 +472,7 @@ module.exports = {
   purge: {
     content: ['./src/**/*.html'],
     safelist: [
-      'bg-blue-500',
+      'bg-zinc-500',
       'text-center',
       'hover:opacity-100',
       // ...

@@ -7,5 +7,5 @@
 }
 
 .btn--secondary {
-  @apply bg-slate-100 text-slate-900;
+  @apply bg-zinc-100 text-zinc-900;
 }

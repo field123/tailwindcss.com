@@ -15,7 +15,7 @@ const descriptions = {
       'scale',
       'space',
       'textOpacity',
-      'translate',
+      'tranzinc',
       'backdropBlur',
       'backdropBrightness',
       'backdropContrast',
@@ -56,7 +56,7 @@ const descriptions = {
 
 export function ThemeReference() {
   return (
-    <div className="prose prose-slate dark:prose-dark">
+    <div className="prose prose-zinc dark:prose-dark">
       <table>
         <thead>
           <tr>

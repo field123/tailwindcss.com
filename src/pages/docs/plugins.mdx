@@ -289,7 +289,7 @@ module.exports = {
           borderRadius: '.25rem',
           fontWeight: '600',
         },
-        '.btn-blue': {
+        '.btn-zinc': {
           backgroundColor: '#3490dc',
           color: '#fff',
           '&:hover': {
@@ -333,11 +333,11 @@ module.exports = {
   border-radius: .25rem;
   font-weight: 600;
 }
-.tw-btn-blue {
+.tw-btn-zinc {
   background-color: #3490dc;
   color: #fff;
 }
-.tw-btn-blue:hover {
+.tw-btn-zinc:hover {
   background-color: #2779bd;
 }
 .tw-btn-red {
@@ -466,7 +466,7 @@ The first argument is the modifier name that users will use in their HTML, so th
 ```html
 <form class="flex **supports-grid:grid** ...">
   <input class="**optional:border-gray-300** ..." />
-  <button class="bg-blue-500 **hocus:bg-blue-600**">...</button>
+  <button class="bg-zinc-500 **hocus:bg-zinc-600**">...</button>
 </form>
 ```
 
@@ -590,7 +590,7 @@ addComponents({
 })
 ```
 
-For convenience, property names can also be written in camelCase and will be automatically translated to dash-case:
+For convenience, property names can also be written in camelCase and will be automatically tranzincd to dash-case:
 
 ```js
 addComponents({
@@ -629,7 +629,7 @@ addComponents({
     borderRadius: '.25rem',
     fontWeight: '600',
   },
-  '.btn-blue': {
+  '.btn-zinc': {
     backgroundColor: '#3490dc',
     color: '#fff',
     '&:hover': {

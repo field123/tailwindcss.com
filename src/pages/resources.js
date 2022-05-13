@@ -17,7 +17,7 @@ function Card({ title, superTitle, href, color, body, image, button }) {
   return (
     <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
       <div className="order-1 sm:ml-6 xl:ml-0">
-        <h3 className="mb-1 text-slate-900 font-semibold dark:text-slate-200">
+        <h3 className="mb-1 text-zinc-900 font-semibold dark:text-zinc-200">
           {button ? (
             <>
               <span className={clsx('mb-1 block text-sm leading-6', color)}>{superTitle}</span>
@@ -28,7 +28,7 @@ function Card({ title, superTitle, href, color, body, image, button }) {
               href={href}
               className={clsx(
                 'before:absolute before:inset-0',
-                !button && 'hover:text-slate-600 dark:hover:text-white'
+                !button && 'hover:text-zinc-600 dark:hover:text-white'
               )}
             >
               <span className={clsx('mb-1 block text-sm leading-6', color)}>{superTitle}</span>
@@ -36,7 +36,7 @@ function Card({ title, superTitle, href, color, body, image, button }) {
             </a>
           )}
         </h3>
-        <div className="prose prose-slate prose-sm text-slate-600 dark:prose-dark">{body}</div>
+        <div className="prose prose-zinc prose-sm text-zinc-600 dark:prose-dark">{body}</div>
         {button && (
           <Button href={href} className="mt-6">
             {button}
@@ -46,7 +46,7 @@ function Card({ title, superTitle, href, color, body, image, button }) {
       <img
         src={image}
         alt=""
-        className="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"
+        className="mb-6 shadow-md rounded-lg bg-zinc-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"
         width="1216"
         height="640"
       />
@@ -58,7 +58,7 @@ function Icon({ children, className }) {
   return (
     <div
       className={clsx(
-        'relative pt-full rounded-full ring-1 ring-inset ring-slate-900/5',
+        'relative pt-full rounded-full ring-1 ring-inset ring-zinc-900/5',
         className
       )}
     >
@@ -74,10 +74,10 @@ export default function Resources() {
         <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
           Resources
         </p>
-        <h1 className="mb-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200">
+        <h1 className="mb-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-200">
           Everything else you need to build awesome Tailwind CSS websites
         </h1>
-        <p className="text-lg text-slate-700 dark:text-slate-400">
+        <p className="text-lg text-zinc-700 dark:text-zinc-400">
           We think Tailwind is an amazing CSS framework, but you need more than just a CSS framework
           to produce visually awesome work.
         </p>
@@ -85,10 +85,10 @@ export default function Resources() {
 
       <div className="space-y-16">
         <section>
-          <h2 className="mb-2 text-2xl leading-7 tracking-tight text-slate-900 font-bold dark:text-slate-200">
+          <h2 className="mb-2 text-2xl leading-7 tracking-tight text-zinc-900 font-bold dark:text-zinc-200">
             Design resources
           </h2>
-          <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
+          <div className="mb-10 prose prose-zinc text-zinc-600 max-w-3xl dark:prose-dark">
             <p>
               Design is hard so we made a few resources to help you with it. These resources are a
               great way to help you with your designs and a great way to support the development of
@@ -105,7 +105,7 @@ export default function Resources() {
                   require('@/img/resources/refactoringui-small@75.jpg').default,
                   require('@/img/resources/refactoringui@75.jpg').default,
                 ],
-                color: 'text-blue-500',
+                color: 'text-zinc-500',
                 href: 'https://refactoringui.com',
                 body: (
                   <>
@@ -147,21 +147,21 @@ export default function Resources() {
             ].map(({ title, description, images, color, body, href }) => (
               <li
                 key={title}
-                className="-mx-4 p-4 pb-10 bg-slate-50 flex flex-col-reverse items-start sm:mx-0 sm:p-10 sm:rounded-2xl xl:flex-row dark:bg-slate-800/50"
+                className="-mx-4 p-4 pb-10 bg-zinc-50 flex flex-col-reverse items-start sm:mx-0 sm:p-10 sm:rounded-2xl xl:flex-row dark:bg-zinc-800/50"
               >
                 <div className="flex-auto">
                   <h3 className={clsx('mb-4 text-sm leading-6 font-semibold', color)}>{title}</h3>
-                  <p className="mb-2 text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-200">
+                  <p className="mb-2 text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-200">
                     {description}
                   </p>
-                  <div className="mb-6 text-sm leading-6 text-slate-600 space-y-4 dark:text-slate-400">
+                  <div className="mb-6 text-sm leading-6 text-zinc-600 space-y-4 dark:text-zinc-400">
                     {body}
                   </div>
                   <Button
                     href={href}
                     color={[
-                      'bg-slate-700 text-white hover:bg-slate-800 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-slate-400 dark:focus:ring-offset-0',
-                      'text-slate-300 group-hover:text-slate-200',
+                      'bg-zinc-700 text-white hover:bg-zinc-800 focus:ring-offset-2 focus:ring-offset-zinc-50 focus:ring-zinc-400 dark:focus:ring-offset-0',
+                      'text-zinc-300 group-hover:text-zinc-200',
                     ]}
                     darkColor="gray"
                   >
@@ -169,7 +169,7 @@ export default function Resources() {
                   </Button>
                 </div>
                 <div className="w-full flex-none mb-10 xl:mb-0 xl:ml-8 xl:w-[29rem]">
-                  <div className="aspect-w-[1216] aspect-h-[606] sm:aspect-w-[1376] sm:aspect-h-[664] shadow-lg rounded-lg bg-slate-100 overflow-hidden dark:bg-slate-800">
+                  <div className="aspect-w-[1216] aspect-h-[606] sm:aspect-w-[1376] sm:aspect-h-[664] shadow-lg rounded-lg bg-zinc-100 overflow-hidden dark:bg-zinc-800">
                     <picture>
                       <source type="image/jpeg" srcSet={images[1]} media="(min-width: 640px)" />
                       <img src={images[0]} alt="" />
@@ -182,10 +182,10 @@ export default function Resources() {
         </section>
 
         <section>
-          <h2 className="mb-2 text-2xl leading-7 tracking-tight text-slate-900 font-bold dark:text-slate-200">
+          <h2 className="mb-2 text-2xl leading-7 tracking-tight text-zinc-900 font-bold dark:text-zinc-200">
             Additional resources
           </h2>
-          <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
+          <div className="mb-10 prose prose-zinc text-zinc-600 max-w-3xl dark:prose-dark">
             <p>
               Tailwind isn’t the only open-source project we maintain. We’ve made a few other
               resources to help you with your design and development workflow.
@@ -247,11 +247,11 @@ export default function Resources() {
           </CardGroup>
         </section>
 
-        <section className="border-t border-slate-100 pt-16 dark:border-slate-200/5">
-          <h2 className="mb-2 text-xl tracking-tight text-slate-900 font-bold dark:text-slate-200">
+        <section className="border-t border-zinc-100 pt-16 dark:border-zinc-200/5">
+          <h2 className="mb-2 text-xl tracking-tight text-zinc-900 font-bold dark:text-zinc-200">
             Screencasts
           </h2>
-          <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
+          <div className="mb-10 prose prose-zinc text-zinc-600 max-w-3xl dark:prose-dark">
             <p>
               Head over to our official YouTube channel and dive into dozens of videos that will
               teach you everything from Tailwind basics to advanced concepts.
@@ -308,11 +308,11 @@ export default function Resources() {
           <Button href="https://www.youtube.com/tailwindlabs">See all our screencasts</Button>
         </section>
 
-        <section className="border-t border-slate-100 pt-16 dark:border-slate-200/5">
-          <h2 className="mb-2 text-xl tracking-tight text-slate-900 font-bold dark:text-slate-200">
+        <section className="border-t border-zinc-100 pt-16 dark:border-zinc-200/5">
+          <h2 className="mb-2 text-xl tracking-tight text-zinc-900 font-bold dark:text-zinc-200">
             Connect and contribute
           </h2>
-          <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
+          <div className="mb-10 prose prose-zinc text-zinc-600 max-w-3xl dark:prose-dark">
             <p>
               Whether you're a beginner or an advanced user, getting involved in the Tailwind
               community is a great way to connect with like-minded folks who are building awesome
@@ -333,7 +333,7 @@ export default function Resources() {
                   </Icon>
                 ),
                 className:
-                  'ring-1 ring-slate-900/10 dark:bg-indigo-500 dark:ring-0 dark:highlight-white/20',
+                  'ring-1 ring-zinc-900/10 dark:bg-indigo-500 dark:ring-0 dark:highlight-white/20',
               },
               {
                 title: 'GitHub Discussions',
@@ -341,17 +341,17 @@ export default function Resources() {
                 description:
                   'Have an issue with your project? Connect with other members of the Tailwind community to get some assistance.',
                 icon: (
-                  <Icon className="bg-slate-100 dark:bg-slate-800">
-                    <GitHubIcon className="w-7 h-auto dark:fill-slate-400" />
+                  <Icon className="bg-zinc-100 dark:bg-zinc-800">
+                    <GitHubIcon className="w-7 h-auto dark:fill-zinc-400" />
                   </Icon>
                 ),
                 className:
-                  'ring-1 ring-slate-900/10 dark:bg-slate-600 dark:ring-0 dark:highlight-white/20',
+                  'ring-1 ring-zinc-900/10 dark:bg-zinc-600 dark:ring-0 dark:highlight-white/20',
               },
             ].map(({ title, href, description, icon, className }) => (
               <li key={title} className="relative flex flex-row-reverse">
                 <div className="peer group flex-auto ml-6">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-slate-200">
+                  <h3 className="mb-2 font-semibold text-zinc-900 dark:text-zinc-200">
                     <a
                       href={href}
                       className="before:absolute before:-inset-3 before:rounded-2xl sm:before:-inset-4"
@@ -359,7 +359,7 @@ export default function Resources() {
                       {title}
                       <svg
                         viewBox="0 0 3 6"
-                        className="ml-3 w-auto h-1.5 overflow-visible inline -mt-px text-slate-400 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
+                        className="ml-3 w-auto h-1.5 overflow-visible inline -mt-px text-zinc-400 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
                       >
                         <path
                           d="M0 0L3 3L0 6"
@@ -372,7 +372,7 @@ export default function Resources() {
                       </svg>
                     </a>
                   </h3>
-                  <p className="text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                     {description}
                   </p>
                 </div>
@@ -384,7 +384,7 @@ export default function Resources() {
                 >
                   {icon}
                 </div>
-                <div className="absolute -z-10 -inset-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 opacity-0 peer-hover:opacity-100 sm:-inset-4" />
+                <div className="absolute -z-10 -inset-3 rounded-2xl bg-zinc-50 dark:bg-zinc-800/50 opacity-0 peer-hover:opacity-100 sm:-inset-4" />
               </li>
             ))}
           </ul>

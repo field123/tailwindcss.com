@@ -26,7 +26,7 @@ const ranges = [
   getRange(' font-medium'),
   getRange(' class="font-medium"'),
   getRange(' class="text-sky-500 dark:text-sky-400"'),
-  getRange(' class="text-slate-700 dark:text-slate-500"'),
+  getRange(' class="text-zinc-700 dark:text-zinc-500"'),
   getRange(' text-center'),
   getRange('md:flex '),
   getRange(' md:p-0'),
@@ -251,7 +251,7 @@ export function Hero() {
           <AnimateSharedLayout>
             <motion.div
               layout={layout}
-              className="relative z-10 rounded-lg shadow-xl text-slate-900 mx-auto sm:w-[23.4375rem] dark:text-slate-300"
+              className="relative z-10 rounded-lg shadow-xl text-zinc-900 mx-auto sm:w-[23.4375rem] dark:text-zinc-300"
               initial={false}
               animate={
                 containerRect?.width
@@ -266,7 +266,7 @@ export function Hero() {
                 layout={layout}
                 transition={TRANSITION}
                 className={clsx(
-                  'bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0',
+                  'bg-white rounded-lg overflow-hidden ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:highlight-white/5 dark:ring-0',
                   {
                     flex: step >= 8 && md,
                     'p-8': step >= 0,
@@ -317,7 +317,7 @@ export function Hero() {
                     transition={TRANSITION}
                     src={require('@/img/sarah-dayan.jpg').default}
                     alt=""
-                    className={clsx('absolute max-w-none object-cover bg-slate-100', {
+                    className={clsx('absolute max-w-none object-cover bg-zinc-100', {
                       'rounded-full': finished && !md,
                     })}
                     style={
@@ -359,7 +359,7 @@ export function Hero() {
                         'transition-colors duration-500',
                         step >= 5
                           ? 'text-sky-500 dark:text-sky-400'
-                          : 'text-black dark:text-slate-300'
+                          : 'text-black dark:text-zinc-300'
                       )}
                     >
                       Sarah Dayan
@@ -371,8 +371,8 @@ export function Hero() {
                       className={clsx(
                         'transition-colors duration-500',
                         step >= 6
-                          ? 'text-slate-700 dark:text-slate-500'
-                          : 'text-black dark:text-slate-300'
+                          ? 'text-zinc-700 dark:text-zinc-500'
+                          : 'text-black dark:text-zinc-300'
                       )}
                     >
                       Staff Engineer, Algolia

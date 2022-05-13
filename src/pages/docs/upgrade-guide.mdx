@@ -234,7 +234,7 @@ As part of enabling all of the extended colors by default, we've given the diffe
 
 | v2 Default | v2 Extended | v3 Unified |
 | --- | --- | --- |
-| N/A | `blueGray` | `slate` |
+| N/A | `zincGray` | `zinc` |
 | `gray` | `coolGray` | `gray` |
 | N/A | `gray` | `zinc` |
 | N/A | `trueGray` | `neutral` |
@@ -390,8 +390,8 @@ module.exports = {
 Super minor change since v3.0.0-alpha.2 where the `file` modifier was introduced — if you were combining it with other modifiers like `hover` or `focus`, you'll need to flip the modifier order:
 
 ```diff-html
-- <input class="file:hover:bg-blue-600 ...">
-+ <input class="hover:file:bg-blue-600 ...">
+- <input class="file:hover:bg-zinc-600 ...">
++ <input class="hover:file:bg-zinc-600 ...">
 ```
 
 Learn more in the [ordering stacked modifiers](/docs/hover-focus-and-other-states#ordering-stacked-modifiers) documentation.
