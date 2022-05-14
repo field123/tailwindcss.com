@@ -1,8 +1,8 @@
-import visit from 'unist-util-visit'
+const visit = require('unist-util-visit')
 
-export function withLinkRoles() {
+module.exports.withLinkRoles = () => {
   return (tree) => {
-    visit(tree, 'element', (element: any) => {
+    visit(tree, 'element', (element) => {
       if (['ol', 'ul'].includes(element.tagName)) {
         element.properties.role = 'list'
       }
