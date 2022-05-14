@@ -64,7 +64,7 @@ export default function App({ Component, pageProps, router }) {
   let section =
     meta.section ||
     Object.entries(Component.layoutProps?.Layout?.nav ?? {}).find(([, items]) =>
-      items.find(({ href }) => href === router.pathname)
+      (items as any).find(({ href }) => href === router.pathname)
     )?.[0]
 
   return (
