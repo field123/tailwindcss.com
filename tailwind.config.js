@@ -7,16 +7,16 @@ module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
-  content: ['./src/**/*.{js,jsx,mdx,html,md}', './remark/**/*.js'],
+  content: ['./src/**/*.{js,jsx,mdx,html,md,ts,tsx}', './remark/**/*.js'],
   darkMode: 'class',
   theme: {
     // `demo-*` screens are used for the "mobile-first" responsive demo
     screens: {
-      'sm': '640px',
+      sm: '640px',
       'demo-sm': '720px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
       '2xl': '1536px',
     },
     aspectRatio: {
