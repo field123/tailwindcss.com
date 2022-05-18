@@ -1,27 +1,35 @@
 import { createPageList } from '@/utils/createPageList'
 
+const fileMatcher = /\.(mdx|md)$/i
+const fileMatcherOld = /\.mdx$/
+
 const pages = createPageList(
   require.context(`../pages/docs/?meta=title,shortTitle,published`, true, /\.mdx$/),
   'docs'
 )
 
 export const documentationNav = {
-  'Promotions': [
+  Promotions: [
     {
       title: 'Overview',
       href: '/docs/promotions',
     },
-    { title: 'Create A Cart Fixed Discount Promotion',
-    href: '/docs/promotions/create-a-cart-fixed-discount-promotion' },
+    {
+      title: 'Create A Cart Fixed Discount Promotion',
+      href: '/docs/promotions/create-a-cart-fixed-discount-promotion',
+    },
 
-    { title: 'Create a Cart Percent Discount Promotion',
-    href: '/docs/promotions/create-a-cart-percent-discount-promotion' },
+    {
+      title: 'Create a Cart Percent Discount Promotion',
+      href: '/docs/promotions/create-a-cart-percent-discount-promotion',
+    },
 
-    { title: 'Create Fixed Bundle Discount Promotion',
-    href: '/docs/promotions/create-fixed-bundle-discount-promotion' },
+    {
+      title: 'Create Fixed Bundle Discount Promotion',
+      href: '/docs/promotions/create-fixed-bundle-discount-promotion',
+    },
 
-    { title: 'Create A Free Gift Promotion',
-    href: '/docs/promotions/create-free-gift-promotion' },
+    { title: 'Create A Free Gift Promotion', href: '/docs/promotions/create-free-gift-promotion' },
   ],
   'Getting Started': [
     {

@@ -68,6 +68,7 @@
   "devDependencies": {
     "@types/node": "^17.0.33",
     "@types/react": "18.0.1",
+    "@types/webpack-env": "^1.16.4",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",

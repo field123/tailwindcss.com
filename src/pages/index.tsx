@@ -97,7 +97,9 @@ function Header() {
               text-center
             </code>{' '}
             and{' '}
-            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">rotate-90</code>{' '}
+            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">
+              rotate-90
+            </code>{' '}
             that can be composed to build any design, directly in your markup.
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">

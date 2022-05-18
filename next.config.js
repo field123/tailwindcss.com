@@ -55,6 +55,7 @@ module.exports = withBundleAnalyzer({
       }
     }
 
+    // Enables the loading of files for next
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|webp|avif|mp4)$/i,
       issuer: /\.(jsx?|tsx?|mdx)$/,
@@ -69,6 +70,7 @@ module.exports = withBundleAnalyzer({
       ],
     })
 
+    // Alias for defaultConfig$ imports.
     config.resolve.alias['defaultConfig$'] = require.resolve('tailwindcss/defaultConfig')
     config.module.rules.push({
       test: require.resolve('tailwindcss/defaultConfig'),
@@ -77,6 +79,7 @@ module.exports = withBundleAnalyzer({
       }),
     })
 
+    // Alias for utilities$ imports.
     config.resolve.alias['utilities$'] = require.resolve('tailwindcss/lib/corePlugins.js')
 
     // import utilities from 'utilities?plugin=backgroundColor'
@@ -175,6 +178,7 @@ module.exports = withBundleAnalyzer({
       ],
     })
 
+    //
     let mdx = (plugins = []) => [
       {
         loader: '@mdx-js/loader',
