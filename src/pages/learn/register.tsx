@@ -12,7 +12,11 @@ export default function Register(): JSX.Element {
         access to our learning center and stay up to date on new features, guides and case studies.
       </p>
       <section className="max-w-xl">
-        <RegisterForm />
+        <RegisterForm
+          submitHandler={(values) => {
+            alert(JSON.stringify(values, null, 2))
+          }}
+        />
       </section>
     </div>
   )
