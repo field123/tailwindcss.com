@@ -161,26 +161,6 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
 
   return (
     <>
-      <div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
-        <div className="w-[108rem] flex-none flex justify-end">
-          <picture>
-            <source srcSet={require('@/img/beams/docs@30.avif').default} type="image/avif" />
-            <img
-              src={require('@/img/beams/docs@tinypng.png').default}
-              alt=""
-              className="w-[71.75rem] flex-none max-w-none dark:hidden"
-            />
-          </picture>
-          <picture>
-            <source srcSet={require('@/img/beams/docs-dark@30.avif').default} type="image/avif" />
-            <img
-              src={require('@/img/beams/docs-dark@tinypng.png').default}
-              alt=""
-              className="w-[90rem] flex-none max-w-none hidden dark:block"
-            />
-          </picture>
-        </div>
-      </div>
       <div
         className={clsx(
           'sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-zinc-900/10 dark:border-zinc-50/[0.06]',
