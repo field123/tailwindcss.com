@@ -21,9 +21,7 @@ function Featured() {
         >
           <circle cx="1" cy="1" r="1" />
         </svg>
-        <span className="ml-2">
-          Add something promotional here
-        </span>
+        <span className="ml-2">Add something promotional here</span>
         <svg
           width="3"
           height="6"
@@ -124,14 +122,14 @@ export function NavItems() {
   return (
     <>
       <li>
-        <Link href="/docs/installation">
-          <a className="hover:text-blue-500 dark:hover:text-blue-800">Docs</a>
+        <Link href="/learn">
+          <a className="hover:text-blue-500 dark:hover:text-blue-800">Learn</a>
         </Link>
       </li>
       <li>
-        <a href="https://tailwindui.com" className="hover:text-blue-500 dark:hover:text-blue-800">
-          Components
-        </a>
+        <Link href="/docs/installation">
+          <a className="hover:text-blue-500 dark:hover:text-blue-800">Docs</a>
+        </Link>
       </li>
       <li>
         <Link href="/blog">
@@ -207,7 +205,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                     Router.push('/brand')
                   }}
                 >
-                  <span className="sr-only">Tailwind CSS home page</span>
+                  <span className="sr-only">Elastic Path Commerce Cloud home page</span>
                   <Logo className="w-auto h-5" />
                 </a>
               </Link>
