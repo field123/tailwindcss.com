@@ -1,7 +1,14 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import { ReactNode } from 'react'
 
-export function Footer({ children, previous, next }) {
+interface IFooter {
+  children?: ReactNode
+  next?: any
+  previous?: any
+}
+
+export function Footer({ children, previous, next }: IFooter) {
   return (
     <footer className={clsx('text-sm leading-6', previous || next ? 'mt-12' : 'mt-16')}>
       {(previous || next) && (
