@@ -12,16 +12,16 @@ export default function LogoCloud(): JSX.Element {
                 <img className="h-12" src="/brand/t-mobile.png" alt="T-Mobile" />
               </div>
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-                <img className="h-12" src="/brand/illumina.png" alt="Illumina" />
+                <img className="h-12 dark:invert" src="/brand/illumina.png" alt="Illumina" />
               </div>
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-                <img className="h-12" src="/brand/deckers.png" alt="Deckers" />
+                <img className="h-12 dark:invert" src="/brand/deckers.png" alt="Deckers" />
               </div>
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
                 <img className="h-12" src="/brand/intuit.png" alt="Intuit" />
               </div>
               <div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
-                <img className="h-12" src="/brand/pella.png" alt="Pella" />
+                <img className="h-12 dark:invert" src="/brand/pella.png" alt="Pella" />
               </div>
             </div>
           </div>
