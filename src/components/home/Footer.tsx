@@ -1,14 +1,8 @@
 import Link from 'next/link'
-import { documentationNav } from '@/navs/documentation'
 import { Logo } from '@/components/Logo'
 
 const footerNav = [
   {
-    'Getting Started': documentationNav['Getting Started'],
-    'Core Concepts': documentationNav['Core Concepts'],
-  },
-  {
-    Customization: documentationNav['Customization'],
     Community: [
       { title: 'GitHub', href: 'https://github.com/tailwindlabs/tailwindcss' },
       { title: 'Discord', href: '/discord' },
