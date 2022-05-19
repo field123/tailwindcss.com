@@ -67,7 +67,7 @@ function Header() {
             Ready to customize your own e-commerce experience in no time?
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-            <NextLink href="/docs/installation">
+            <NextLink href="/learn">
               <a className="bg-blue-900 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-blue-500 dark:highlight-white/20 dark:hover:bg-blue-400">
                 Start learning
               </a>
