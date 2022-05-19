@@ -256,6 +256,7 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
     function ({ addVariant }) {
       addVariant(
         'supports-backdrop-blur',
