@@ -1,23 +1,10 @@
-import { Testimonials } from '@/components/Testimonials'
-import { DarkMode } from '@/components/home/DarkMode'
-import { ConstraintBased } from '@/components/home/ConstraintBased'
-import { BuildAnything } from '@/components/home/BuildAnything'
-import { Performance } from '@/components/home/Performance'
-import { MobileFirst } from '@/components/home/MobileFirst'
-import { StateVariants } from '@/components/home/StateVariants'
-import { ComponentDriven } from '@/components/home/ComponentDriven'
-import { Customization } from '@/components/home/Customization'
-import { ModernFeatures } from '@/components/home/ModernFeatures'
-import { EditorTools } from '@/components/home/EditorTools'
-import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
 import { SearchButton } from '@/components/Search'
-import { Hero } from '@/components/home/Hero'
+import LogoCloud from '@/components/home/LogoCloud'
 import { Logo } from '@/components/Logo'
 import { Footer } from '@/components/home/Footer'
 import NextLink from 'next/link'
 import Head from 'next/head'
 import { NavItems, NavPopover } from '@/components/Header'
-import styles from './index.module.css'
 import clsx from 'clsx'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
@@ -25,20 +12,7 @@ function Header() {
   return (
     <header className="relative">
       <div className="px-4 sm:px-6 md:px-8">
-        <div
-          className={clsx(
-            'absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-zinc-50 dark:bg-[#0B1120]',
-            styles.beams
-          )}
-        >
-          <div
-            className="absolute inset-0 bg-grid-zinc-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-zinc-400/[0.05] dark:bg-bottom dark:border-b dark:border-zinc-100/5"
-            style={{
-              maskImage: 'linear-gradient(to bottom, transparent, black)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
-            }}
-          />
-        </div>
+        <div className={clsx('absolute inset-0 ')}></div>
         <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-zinc-700 font-semibold text-sm leading-6 dark:text-zinc-200">
           <Logo className="w-auto h-5" />
           <div className="flex items-center">
@@ -87,20 +61,10 @@ function Header() {
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 className="text-blue-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            Rapidly build modern websites without ever leaving your HTML.
+            Deliver your e-commerce vision with ease and speed
           </h1>
           <p className="mt-6 text-lg text-zinc-600 text-center max-w-3xl mx-auto dark:text-zinc-400">
-            A utility-first CSS framework packed with classes like{' '}
-            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">flex</code>,{' '}
-            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">pt-4</code>,{' '}
-            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">
-              text-center
-            </code>{' '}
-            and{' '}
-            <code className="font-mono font-medium text-blue-500 dark:text-blue-800">
-              rotate-90
-            </code>{' '}
-            that can be composed to build any design, directly in your markup.
+            Ready to customize your own e-commerce experience in no time?
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
             <NextLink href="/docs/installation">
@@ -108,42 +72,9 @@ function Header() {
                 Get started
               </a>
             </NextLink>
-            <SearchButton className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-zinc-900/10 hover:ring-zinc-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm rounded-lg text-zinc-400 dark:bg-zinc-800 dark:ring-0 dark:text-zinc-300 dark:highlight-white/5 dark:hover:bg-zinc-700">
-              {({ actionKey }) => (
-                <>
-                  <svg
-                    width="24"
-                    height="24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="flex-none text-zinc-300 dark:text-zinc-400"
-                    aria-hidden="true"
-                  >
-                    <path d="m19 19-3.5-3.5" />
-                    <circle cx="11" cy="11" r="6" />
-                  </svg>
-                  <span className="flex-auto">Quick search...</span>
-                  {actionKey && (
-                    <kbd className="font-sans font-semibold dark:text-zinc-500">
-                      <abbr
-                        title={actionKey[1]}
-                        className="no-underline text-zinc-300 dark:text-zinc-500"
-                      >
-                        {actionKey[0]}
-                      </abbr>{' '}
-                      K
-                    </kbd>
-                  )}
-                </>
-              )}
-            </SearchButton>
           </div>
         </div>
       </div>
-      <Hero />
     </header>
   )
 }
@@ -164,56 +95,9 @@ export default function Home() {
         />
         <title>Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</title>
       </Head>
-      <div className="mb-20 space-y-20 overflow-hidden sm:mb-32 sm:space-y-32 md:mb-40 md:space-y-40">
+      <div className="mb-10 space-y-2 overflow-hidden">
         <Header />
-        <section className="text-center px-8">
-          <h2 className="text-zinc-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-            “Best practices” don’t actually work.
-          </h2>
-          <figure>
-            <blockquote>
-              <p className="mt-6 max-w-3xl mx-auto text-lg">
-                I’ve written{' '}
-                <a
-                  href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
-                  className="text-blue-500 font-semibold dark:text-blue-800"
-                >
-                  a few thousand words
-                </a>{' '}
-                on why traditional “semantic class names” are the reason CSS is hard to maintain,
-                but the truth is you’re never going to believe me until you actually try it. If you
-                can suppress the urge to retch long enough to give it a chance, I really think
-                you’ll wonder how you ever worked with CSS any other way.
-              </p>
-            </blockquote>
-            <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">
-              <img
-                src={require('@/img/adam.jpg').default}
-                alt=""
-                className="w-14 h-14 rounded-full"
-                loading="lazy"
-              />
-              <div>
-                <div className="text-zinc-900 font-semibold dark:text-white">Adam Wathan</div>
-                <div className="mt-0.5 text-sm leading-6">Creator of Tailwind CSS</div>
-              </div>
-            </figcaption>
-          </figure>
-        </section>
-      </div>
-      <Testimonials />
-      <div className="pt-20 mb-20 space-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:space-y-32 md:pt-40 md:mb-40 md:space-y-40">
-        <ConstraintBased />
-        <BuildAnything />
-        <Performance />
-        <MobileFirst />
-        <StateVariants />
-        <ComponentDriven />
-        <DarkMode />
-        <Customization />
-        <ModernFeatures />
-        <EditorTools />
-        <ReadyMadeComponents />
+        <LogoCloud />
       </div>
       <Footer />
     </>
