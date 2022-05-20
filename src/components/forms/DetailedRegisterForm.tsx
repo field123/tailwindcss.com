@@ -1,12 +1,6 @@
 import { DetailedRegistrationForm } from '@/services/user/user-types'
 import { detailRegisterSchema } from '@/utils/form-validation/register-validation'
-import {
-  ariaDescribedbyCond,
-  ariaInvalidCond,
-  formFieldCondClasses,
-} from '@/utils/formik-conditionals'
-import { Formik, Field, FormikHelpers, ErrorMessage } from 'formik'
-import ErrorCircle from './ErrorCircle'
+import { Formik, Field, FormikHelpers } from 'formik'
 import SimpleField from './SimpleField'
 
 interface IDetailedRegisterForm {
@@ -35,6 +29,7 @@ export default function DetailedRegisterForm({
             initialValues={initialFormValues}
             validationSchema={detailRegisterSchema}
             onSubmit={submitHandler}
+            validateOnChange={false}
           >
             {({ errors, touched, validateForm }) => {
               return (
@@ -42,34 +37,22 @@ export default function DetailedRegisterForm({
                   <div className="py-5 sm:py-6">
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
-                        <label
-                          htmlFor="first-name"
-                          className="block text-sm font-medium text-zinc-700 dark:text-zinc-200"
-                        >
-                          First name
-                        </label>
-                        <Field
-                          type="text"
-                          name="first-name"
-                          id="first-name"
+                        <SimpleField
+                          errors={errors}
+                          touched={touched}
+                          labelText={'First Name'}
+                          fieldName={'first-name'}
                           autoComplete="given-name"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
 
                       <div className="col-span-6 sm:col-span-3">
-                        <label
-                          htmlFor="last-name"
-                          className="block text-sm font-medium text-zinc-700 dark:text-zinc-200"
-                        >
-                          Last name
-                        </label>
-                        <Field
-                          type="text"
-                          name="last-name"
-                          id="last-name"
+                        <SimpleField
+                          errors={errors}
+                          touched={touched}
+                          labelText={'Last Name'}
+                          fieldName={'last-name'}
                           autoComplete="family-name"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
 
@@ -79,39 +62,25 @@ export default function DetailedRegisterForm({
                           touched={touched}
                           labelText={'Email Address'}
                           autoComplete={'email'}
-                          name={'email-address'}
+                          fieldName={'email-address'}
                         />
                       </div>
 
                       <div className="col-span-6">
-                        <label
-                          htmlFor="organisation"
-                          className="block text-sm font-medium text-zinc-700 dark:text-zinc-200"
-                        >
-                          Organisation
-                        </label>
-                        <Field
-                          type="text"
-                          name="organisation"
-                          id="organisation"
-                          autoComplete="organisation"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        <SimpleField
+                          errors={errors}
+                          touched={touched}
+                          labelText={'Organisation'}
+                          fieldName={'organisation'}
                         />
                       </div>
 
                       <div className="col-span-6">
-                        <label
-                          htmlFor="role"
-                          className="block text-sm font-medium text-zinc-700 dark:text-zinc-200"
-                        >
-                          Role
-                        </label>
-                        <Field
-                          type="text"
-                          name="role"
-                          id="role"
-                          autoComplete="role"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        <SimpleField
+                          errors={errors}
+                          touched={touched}
+                          labelText={'Role'}
+                          fieldName={'role'}
                         />
                       </div>
                     </div>
