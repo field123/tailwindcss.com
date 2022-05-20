@@ -1,6 +1,6 @@
 import { DetailedRegistrationForm } from '@/services/user/user-types'
 import { detailRegisterSchema } from '@/utils/form-validation/register-validation'
-import { Formik, FormikHelpers } from 'formik'
+import { Formik, FormikHelpers, Form } from 'formik'
 import SimpleField from './SimpleField'
 
 interface IDetailedRegisterForm {
@@ -33,67 +33,70 @@ export default function DetailedRegisterForm({
           >
             {({ errors, touched, validateForm }) => {
               return (
-                <div className="sm:rounded-md">
-                  <div className="py-5 sm:py-6">
-                    <div className="grid grid-cols-6 gap-6">
-                      <div className="col-span-6 sm:col-span-3">
-                        <SimpleField
-                          errors={errors}
-                          touched={touched}
-                          labelText={'First Name'}
-                          fieldName={'first-name'}
-                          autoComplete="given-name"
-                        />
-                      </div>
+                <Form>
+                  <div className="sm:rounded-md">
+                    <div className="py-5 sm:py-6">
+                      <div className="grid grid-cols-6 gap-6">
+                        <div className="col-span-6 sm:col-span-3">
+                          <SimpleField
+                            errors={errors}
+                            touched={touched}
+                            labelText={'First Name'}
+                            fieldName={'first-name'}
+                            autoComplete="given-name"
+                          />
+                        </div>
 
-                      <div className="col-span-6 sm:col-span-3">
-                        <SimpleField
-                          errors={errors}
-                          touched={touched}
-                          labelText={'Last Name'}
-                          fieldName={'last-name'}
-                          autoComplete="family-name"
-                        />
-                      </div>
+                        <div className="col-span-6 sm:col-span-3">
+                          <SimpleField
+                            errors={errors}
+                            touched={touched}
+                            labelText={'Last Name'}
+                            fieldName={'last-name'}
+                            autoComplete="family-name"
+                          />
+                        </div>
 
-                      <div className="col-span-6">
-                        <SimpleField
-                          errors={errors}
-                          touched={touched}
-                          labelText={'Email Address'}
-                          autoComplete={'email'}
-                          fieldName={'email-address'}
-                        />
-                      </div>
+                        <div className="col-span-6">
+                          <SimpleField
+                            errors={errors}
+                            touched={touched}
+                            labelText={'Email Address'}
+                            autoComplete={'email'}
+                            fieldName={'email-address'}
+                          />
+                        </div>
 
-                      <div className="col-span-6">
-                        <SimpleField
-                          errors={errors}
-                          touched={touched}
-                          labelText={'Organisation'}
-                          fieldName={'organisation'}
-                        />
-                      </div>
+                        <div className="col-span-6">
+                          <SimpleField
+                            errors={errors}
+                            touched={touched}
+                            labelText={'Organisation'}
+                            fieldName={'organisation'}
+                          />
+                        </div>
 
-                      <div className="col-span-6">
-                        <SimpleField
-                          errors={errors}
-                          touched={touched}
-                          labelText={'Role'}
-                          fieldName={'role'}
-                        />
+                        <div className="col-span-6">
+                          <SimpleField
+                            errors={errors}
+                            touched={touched}
+                            labelText={'Role'}
+                            fieldName={'role'}
+                          />
+                        </div>
                       </div>
                     </div>
+                    <div className="py-3 sm:py-6">
+                      <button
+                        type="submit"
+                        className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        onClick={validateForm}
+                      >
+                        Sign Up
+                      </button>
+                    </div>
                   </div>
-                  <div className="py-3 sm:py-6">
-                    <button
-                      type="submit"
-                      className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-                </div>
+                </Form>
               )
             }}
           </Formik>
