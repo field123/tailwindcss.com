@@ -1,6 +1,6 @@
 import { DetailedRegistrationForm } from '@/services/user/user-types'
 import { detailRegisterSchema } from '@/utils/form-validation/register-validation'
-import { Formik, Field, FormikHelpers } from 'formik'
+import { Formik, FormikHelpers } from 'formik'
 import SimpleField from './SimpleField'
 
 interface IDetailedRegisterForm {
