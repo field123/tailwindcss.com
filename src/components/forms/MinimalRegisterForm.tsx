@@ -1,4 +1,5 @@
 import { MinimalRegistrationForm } from '@/services/user/user-types'
+import { minimalRegisterSchema } from '@/utils/form-validation/register-validation'
 import { Formik, Form, Field, FormikHelpers } from 'formik'
 import { Logo } from '../Logo'
 
@@ -30,7 +31,7 @@ export default function MinimalRegisterForm({ submitHandler }: IMinimalRegisterF
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <Formik
               initialValues={initialFormValues}
-              // TODO validationSchema={loginSchema}
+              validationSchema={minimalRegisterSchema}
               onSubmit={submitHandler}
             >
               <Form className="space-y-6">
