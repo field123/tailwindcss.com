@@ -1,5 +1,6 @@
-import RegisterForm from '@/components/forms/RegisterForm'
+import DetailedRegisterForm from '@/components/forms/DetailedRegisterForm'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
+import { registerUserAccount } from '@/services/user/user-service'
 
 export default function Register(): JSX.Element {
   return (
@@ -12,11 +13,7 @@ export default function Register(): JSX.Element {
         access to our learning center and stay up to date on new features, guides and case studies.
       </p>
       <section className="max-w-xl">
-        <RegisterForm
-          submitHandler={(values) => {
-            alert(JSON.stringify(values, null, 2))
-          }}
-        />
+        <DetailedRegisterForm submitHandler={(values) => registerUserAccount(values)} />
       </section>
     </div>
   )
