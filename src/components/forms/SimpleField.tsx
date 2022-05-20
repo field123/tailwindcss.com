@@ -7,7 +7,7 @@ import { Field, ErrorMessage, FormikErrors, FormikTouched } from 'formik'
 import ErrorCircle from './ErrorCircle'
 
 interface ISimpleField<T> {
-  name: string
+  fieldName: string
   labelText: string
   autoComplete?: string
   errors: FormikErrors<T>
@@ -15,7 +15,7 @@ interface ISimpleField<T> {
 }
 
 export default function SimpleField<T>({
-  name,
+  fieldName,
   labelText,
   errors,
   touched,
@@ -23,26 +23,29 @@ export default function SimpleField<T>({
 }: ISimpleField<T>) {
   return (
     <>
-      <label htmlFor={name} className="block text-sm font-medium text-zinc-700 dark:text-zinc-200">
+      <label
+        htmlFor={fieldName}
+        className="block text-sm font-medium text-zinc-700 dark:text-zinc-200"
+      >
         {labelText}
       </label>
       <div className="relative">
         <Field
           type="text"
-          name={name}
-          id={name}
-          autoComplete={autoComplete ? autoComplete : name}
-          aria-invalid={ariaInvalidCond(errors, touched, name)}
-          aria-describedby={ariaDescribedbyCond(errors, touched, name)}
+          name={fieldName}
+          id={fieldName}
+          autoComplete={autoComplete ? autoComplete : fieldName}
+          aria-invalid={ariaInvalidCond(errors, touched, fieldName)}
+          aria-describedby={ariaDescribedbyCond(errors, touched, fieldName)}
           aria-required="true"
-          className={formFieldCondClasses(errors)}
+          className={formFieldCondClasses(fieldName, errors, touched)}
         />
-        <ErrorCircle errors={errors} touched={touched} name={name} />
+        <ErrorCircle errors={errors} touched={touched} fieldName={fieldName} />
       </div>
 
-      <ErrorMessage name={name}>
+      <ErrorMessage name={fieldName}>
         {(msg) => (
-          <p className="mt-2 text-sm text-red-600" id={`${name}-error`}>
+          <p className="mt-2 text-sm text-red-600" id={`${fieldName}-error`}>
             {msg}
           </p>
         )}
